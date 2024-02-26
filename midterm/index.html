@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lone Starfish</title>
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="main-container">
+    <header>
+        <!-- Removed the image tag for the header and using CSS background instead -->
+        <h1>Serenity Shores</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#story">STORY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Article section with text wrapping around an image -->
+        <article id="story">
+            <h2><strong>Embrace the Calm</strong></h2>
+            <img src="images/beach.jpeg" alt="Serenity Shores" class="article-image">
+            <p>At Serenity Shores, we believe in the power of nature to restore balance to our busy lives. Our beach is a haven where the horizon stretches infinitely, and the only deadlines are the tides. Here, you can walk along the shore, your thoughts mingling with the rhythmic waves, and find a peace that city life cannot offerAt Serenity Shores, we believe in the power of nature to restore balance to our busy lives. Our beach is a haven where the horizon stretches infinitely, and the only deadlines are the tides.</p>
+        </article>
+    
+        <!-- Facts section using list -->
+        <section id="facts" class="facts">
+            <h2><strong> Facts About Serenity Shores</strong></h2>
+            <ul>
+                <li>Serenity Shores is home to a diverse ecosystem, including playful dolphins and majestic sea turtles.</li>
+                <li>Our community is dedicated to sustainability, ensuring that the beauty of the beach is preserved for generations.</li>
+                <li>The beach is known for its spectacular sunsets, which paint the sky in a palette of extraordinary colors every evening.</li>
+            </ul>
+        </section>
+    
+        <!-- Contact form with linked labels and inputs -->
+        <section id="contact" class="contact-section">
+            <h2><strong>Contact to Learn More</strong></h2>
+            <form action="your-server-side-handler" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <fieldset class="radio-buttons">
+                    <legend>Would you like to visit the starfish?</legend>
+                    <label><input type="radio" name="visit" value="yes" required> Yes</label>
+                    <label><input type="radio" name="visit" value="no"> No</label>
+                    <label><input type="radio" name="visit" value="maybe"> Maybe</label>
+                </fieldset>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    <footer>
+        <p>&copy; Lone Starfish</p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
