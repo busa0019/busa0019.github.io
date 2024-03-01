@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lone Starfish</title>
+    <title>busa0019 midterm</title>
     <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="main-container">
     <header>
-        <!-- Removed the image tag for the header and using CSS background instead -->
+        <img src="images/beach.jpeg" alt="Header Image">
         <h1>Serenity Shores</h1>
     </header>
         <nav>
@@ -20,15 +20,16 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+        <main>
         <!-- Article section with text wrapping around an image -->
-        <article id="story">
+        <article id="story" class="clearfix">
             <h2><strong>Embrace the Calm</strong></h2>
             <img src="images/beach.jpeg" alt="Serenity Shores" class="article-image">
             <p>At Serenity Shores, we believe in the power of nature to restore balance to our busy lives. Our beach is a haven where the horizon stretches infinitely, and the only deadlines are the tides. Here, you can walk along the shore, your thoughts mingling with the rhythmic waves, and find a peace that city life cannot offerAt Serenity Shores, we believe in the power of nature to restore balance to our busy lives. Our beach is a haven where the horizon stretches infinitely, and the only deadlines are the tides.</p>
         </article>
     
         <!-- Facts section using list -->
-        <section id="facts" class="facts">
+        <section class="facts">
             <h2><strong> Facts About Serenity Shores</strong></h2>
             <ul>
                 <li>Serenity Shores is home to a diverse ecosystem, including playful dolphins and majestic sea turtles.</li>
@@ -39,8 +40,8 @@
     
         <!-- Contact form with linked labels and inputs -->
         <section id="contact" class="contact-section">
-            <h2><strong>Contact to Learn More</strong></h2>
-            <form action="your-server-side-handler" method="post">
+            <h2 class="contact-heading"><strong>Contact to Learn More</strong></h2>
+            <form action="thanks.html" method="post">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -60,11 +61,11 @@
                 <button type="submit">Send</button>
             </form>
         </section>
-
+    </main>
     <footer>
-        <p>&copy; Lone Starfish</p>
+        <p>&copy; Serenity Shores</p>
     </footer>
-</div>
+ </div>
 </body>
 </html>
 

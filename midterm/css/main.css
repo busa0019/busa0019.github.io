@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Define the root font-size for the document */
-html {
-    font-size: 14px;
-}
 
 /* Global styles */
 body {
@@ -170,9 +166,9 @@ article h2 {
     align-items: center;
 }
 .radio-buttons  {
-    display: flex; /* Align the label text with the radio button */
-    justify-content: flex-start; /* Center align the text with the radio button */
-    gap: 20px;
+    display: flex; /*Align the label text with the radio button*/
+    /* justify-content: flex-start; Center align the text with the radio button */
+    /* gap: 20px; */
 }
 
 form button {
@@ -196,7 +192,7 @@ form {
     background-color: #ffffff;
 }
 
-form label,
+form label, 
 form input,
 form textarea,
 form button {
@@ -208,8 +204,8 @@ form button {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    padding: 0.5rem; /* 8px if the root size is
- top: 0;*/
+    padding: 0.5rem; /* 8px if the root size is*/
+ top: 0;
     }
 /* Footer styles */
 footer {
