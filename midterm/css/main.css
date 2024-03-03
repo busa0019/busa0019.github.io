@@ -1,58 +1,64 @@
-/* Resetting all elements to box-sizing: border-box */
+/* General Reset */
+/* Apply box-sizing: border-box to all elements for consistent sizing */
 * {
     box-sizing: border-box;
 }
 
-/* Global styles */
+/* Body Styles */
+/* Global styles applied to the entire webpage */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #aad4cf; /* Main background color */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Sets the default font for the body */
+    line-height: 1.6;  /* Sets the default line height for text*/
+    color: #333; /* Sets the default text color */
+    background-color: #aad4cf; /* Sets the background color of the webpage */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding*/
 }
 
-/* Header styles */
+/*  Styles for the header section */
 header {
-   width: 100%;
-    text-align: center;
-    position: relative;
+   width: 100%; /* Ensures the header spans the full width of the page */
+   text-align: center; /* Centers the text within the header */
+   position: relative; /* Enables absolute positioning of children relative to this */
 }
 
+/* Styles for images within the header */
 header img {
-    width: calc(100% + 2rem); /* Extend width to account for container's padding */
-    margin-left: -1rem; /* Negative margin to counteract container's padding */
-    margin-right: -1rem;
-    height: auto; /* Maintain aspect ratio */
-    display: block;
+    width: calc(100% + 2rem); /*  Extends the image width to account for container padding, making it edge-to-edge */
+    margin-left: -1rem; /* Negative margin to counteract container's padding for left side */
+    margin-right: -1rem; /* Negative margin to counteract container's padding for right side*/
+    height: auto; /*  Maintains the aspect ratio of the image */
+    display: block; /* Display block to remove bottom space*/
 }
 
+
+/* Styles for the main heading (h1) within the header */
 header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the title on the image */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem; /* Sets the font size of the heading */
+    font-weight: bold; /* Makes the heading text bold */
+    color: #fff; /* Sets the text color to white */
+    position: absolute; /* Position the title over the image*/
+    top: 50%; /* Centers the heading vertically */
+    left: 50%; /* Centers the heading horizontally */
+    transform: translate(-50%, -50%); /* Offset the title to truly center it */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
     
 }
 
 /* Navigation bar styles */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;  
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Removes default padding  */
+    margin: 0; /* Removes default margin  */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Space items evenly */ 
 }
 
+/* Style individual navigation items */
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 1rem; /* Margin around each nav item */
     position: relative;
-    padding: 0 15px;
+    padding: 0 15px; /* Padding inside each nav item */
 }
 
 /* Add vertical lines between nav items except for the last one */
@@ -60,45 +66,47 @@ nav ul li:not(:last-child) {
     border-right: 1px solid #000; /* Set the color and width of the line */
 }
 
+/* Style for links within the navigation bar */
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    padding: 0.5rem;
-    display: block;   
-    font-weight: bold;
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Text color for links */
+    font-size: 1rem; /* Font size for links */
+    padding: 0.5rem; /* Padding around links for clickable area */
+    display: block;  /* Display block to allow padding to affect clickable area */
+    font-weight: bold; /* Make navigation links bold */
 }
 
-/* Enhances hover and focus states for keyboard navigation */
+/* Styles for hover and focus states to improve accessibility and interactivity */
 nav ul li a:hover, 
 nav ul li a:focus { 
-    font-weight: bold;
-    color: blue; /* Highlight color on hover/focus */
-    text-decoration: underline; /* Underline on hover for visual feedback */
+    color: blue; /* Change text color on hover/focus */
+    text-decoration: underline; /* Underline text on hover/focus for visibility */
 }
 
-/* Main content container */
+/* Main Container Styles */
 .main-container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #cde7e0; /* Lighter green background for content */
-    padding: 1rem;
+    width: 80%; /* Set the width of the container */
+    margin: 20px auto; /* Center the container with automatic horizontal margins */
+    background-color: #cde7e0; /* Lighter green background color for content in the container */
+    padding: 1rem; /* Padding inside the container */
     padding-top: 0;/* Remove top padding affecting the header image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */ 
 }
 
 /* Article styles */
+/* Styles for articles within the main content */
 article {
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Padding inside articles */
+    margin: 0; /* Margin around articles */
 }
 
+/* Styles for images within articles */
 .article-image {
-    float: left;
-    margin-right: 1rem;
+    float: left; /* Float images to the left */
+    margin-right: 1rem; /*Margin to the right of images */
     margin-bottom: 1rem;
-    width: 300px;
-    height: auto;
+    width: 300px; /* Width of article images */
+    height: auto;  /* Maintain aspect ratio of images */
 }
 
 /* Facts section styles */
@@ -109,8 +117,8 @@ article {
 
   /* Clearfix: after the floated elements to clear the float for subsequent elements */
 .clearfix::after {
-    content: "";
-    display: table;
+    content: ""; /* Required content property */
+    display: table; /* Change display to table */
     clear: both;
 }
 
