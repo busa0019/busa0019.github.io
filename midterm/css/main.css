@@ -21,19 +21,23 @@ header {
 }
 
 header img {
-    width: 100%; /* Ensure the image covers the full width of the header */
+    width: calc(100% + 2rem); /* Extend width to account for container's padding */
+    margin-left: -1rem; /* Negative margin to counteract container's padding */
+    margin-right: -1rem;
     height: auto; /* Maintain aspect ratio */
     display: block;
 }
 
 header h1 {
     font-size: 2rem;
+    font-weight: bold;
     color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the title on the image */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 /* Navigation bar styles */
@@ -62,6 +66,7 @@ nav ul li a {
     font-size: 1rem;
     padding: 0.5rem;
     display: block;   
+    font-weight: bold;
 }
 
 /* Enhances hover and focus states for keyboard navigation */
@@ -78,6 +83,7 @@ nav ul li a:focus {
     margin: 20px auto;
     background-color: #cde7e0; /* Lighter green background for content */
     padding: 1rem;
+    padding-top: 0;/* Remove top padding affecting the header image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
 }
 
@@ -170,6 +176,7 @@ article {
     background-color: pink; /* Darker shade for hover state */
 }
 
+
 /* Contact heading styles */
 .contact-heading {
     font-size: 1.5rem;
@@ -210,6 +217,9 @@ h2, nav, nav a {
     margin-top: 10px; /* Adjust this value as needed for spacing after the heading */
 }
 
+h1, h2 {
+    font-size: 1.5rem; /* Example size, adjust as needed */
+}
 
 
 
