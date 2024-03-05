@@ -15,6 +15,7 @@ body {
     padding: 0; /* Remove default padding*/
 }
 
+/* Header Styles */
 /*  Styles for the header section */
 header {
    width: 100%; /* Ensures the header spans the full width of the page */
@@ -46,6 +47,10 @@ header h1 {
 }
 
 /* Navigation bar styles */
+nav {
+    font-weight: bold; /* Make navigation links bold */
+}
+
 nav ul {
     list-style-type: none; /* Remove default list styling */
     padding: 0; /* Removes default padding  */
@@ -73,7 +78,6 @@ nav ul li a {
     font-size: 1rem; /* Font size for links */
     padding: 0.5rem; /* Padding around links for clickable area */
     display: block;  /* Display block to allow padding to affect clickable area */
-    font-weight: bold; /* Make navigation links bold */
 }
 
 /* Styles for hover and focus states to improve accessibility and interactivity */
@@ -102,132 +106,118 @@ article {
 
 /* Styles for images within articles */
 .article-image {
-    float: left; /* Float images to the left */
-    margin-right: 1rem; /*Margin to the right of images */
-    margin-bottom: 1rem;
-    width: 300px; /* Width of article images */
+    float: left; /* Float images to the left to allow text to wrap around them */
+    margin-right: 1rem; /* Adds right margin for spacing between the image and text */
+    margin-bottom: 1rem; /*  Adds bottom margin for spacing below the image */
+    width: 300px; /* Sets a fixed width for images to ensure consistency */
     height: auto;  /* Maintain aspect ratio of images */
+    margin-top: 20px; /* Provides top margin to ensure there's space between the image and any content above it*/
 }
 
 /* Facts section styles */
 .facts {
-    padding: 1rem;
-    margin-top: 1rem;
-  }
+    padding: 1rem; /* Add padding inside the facts section for spacing around its content */
+    margin-top: 1rem; /* Add top margin to separate the facts section from preceding content */
+}
+
+.facts ul {
+    list-style-type: disc; /* Style list items with discs */
+    margin-left: 20px; /* Left margin for list */
+    padding-left: 0; /* Reset left padding  */
+}
+
+.facts li {
+    margin-bottom: 0.5rem; /* Bottom margin for list items */
+}
 
   /* Clearfix: after the floated elements to clear the float for subsequent elements */
 .clearfix::after {
     content: ""; /* Required content property */
     display: table; /* Change display to table */
-    clear: both;
+    clear: both;  /* Clear both sides */
 }
-
-.facts ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 0; /* Reset padding to 0 */
-}
-
-.facts li {
-    margin-bottom: 0.5rem;
-}
-
 
 /* Contact form styles */
 .contact-section form {
-    border: 2px solid #000; /* Black border around the form only */
-    padding: 1rem;
-    background-color: #cde7e0; /* Maintain the background color for the form */
+    border: 2px solid #000; /* Black border around the form for visual distinction  */
+    padding: 1rem;  /* Add padding inside the form for spacing between the border and form elements */
+    background-color: #cde7e0; /* Maintain the background color for the form for consistency with the theme */
 }
 
-/* Input and textarea styles */
+/* Input, Textarea, Button, and Radio Buttons Styles */
 .contact-section input,
 .contact-section textarea,
 .contact-section button,
 .radio-buttons {
-    border: none; /* Remove individual borders for inputs, textarea, and button */
-    padding: 8px;
-    margin-bottom: 10px; /* Keep the margin for spacing */
+    border: none; /* Remove individual borders for a cleaner look */
+    padding: 8px; /* Adds padding inside the elements for better usability and visual appeal */
+    margin-bottom: 10px; /* Bottom margin for spacing between form elements */
 }
 
 .contact-section input[type="text"],
 .contact-section input[type="email"],
 .contact-section textarea {
-    width: calc(100% - 8px); /* Corrected padding subtraction */
+    width: calc(100% - 8px); /* Adjust width to account for padding  */
 }
 
 /* Radio button fieldset styles */
 .contact-section .radio-buttons {
-    padding: 0; /* Remove padding from fieldset */
-    margin-bottom: 10px; /* Keep the margin for spacing */
+    padding: 0; /* Remove padding */
+    margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
 .contact-section .radio-buttons legend {
-    margin-bottom: 5px; /* Add some margin below the legend */
+    margin-bottom: 5px; /* Add some bottom margin below the legend */
 }
 
 /* Button styles */
 .contact-section button {
-    background-color: beige;
+    background-color: beige;  /* Button background color */
     text-align: center; /* Center the text inside the button */
     display: block; /* Make the button a block element */
     width: auto; /* Changed to auto for better flexibility */
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0; /* Remove the bottom margin for the button */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Cursor to pointer on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    margin-bottom: 0; /* Remove  bottom margin  */
 }
 
 /* Hover effect for button */
 .contact-section button:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: pink; /* Darker shade for hover state */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    background-color: pink; /* Background color change on hover */
 }
 
 
-/* Contact heading styles */
-.contact-heading {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 2rem 0; /* Adjusted to only apply vertical margins */
-    padding: 1rem; /* Ensures padding does not affect alignment */
+/* Shared heading styles */
+.contact-heading,
+.facts h2,
+.contact-section h2,
+#story h2 {
+    text-align: left; /* Align headings to the left */
+    margin-left: 2px; /* Left margin for alignment */
+    font-size: 1.5rem; /* Font size for headings */
+    margin-top: 20px; /* Top margin for spacing */
+    font-weight: bold; /*make all shared heading bold*/
+}
+
+/* Paragraph Styles in Story Section */
+#story p {
+    margin-top: 10px; /*  Top margin for spacing after heading*/
 }
 
 /* Footer styles */
 footer {
-    text-align: right;
-    padding: 1rem;
-    margin-top: 1rem;
-    color: black;  /* Ensures the text color is consistent */
+    text-align: right; /* Align text to the right */
+    padding: 1rem; /* Padding inside the footer */
+    margin-top: 1rem;  /* Top margin */
+    color: black;  /* Ensure text color is black */
 }
 
- .facts h2, .contact-section h2 {
-    text-align: left; /* Align all headings to the left */
-    margin-left: 2px; /* Adjusted for consistency */
-}
 
-h2, nav, nav a {
-    font-weight: bold;
-}
 
-#story {
-    margin-top: 20px; /* Adjust the value as needed */
-}
 
-.article-image {
-    margin-top: 20px; /* Adjust the value as needed */
-}
-#story h2 {
-    margin-top: 20px; /* Adjust the value as needed */
-}
 
-#story p {
-    margin-top: 10px; /* Adjust this value as needed for spacing after the heading */
-}
-
-h1, h2 {
-    font-size: 1.5rem; /* Example size, adjust as needed */
-}
 
 
 

@@ -1,59 +1,94 @@
 <!DOCTYPE html>
+<!-- Defines the document type and version of HTML -->
 <html lang="en">
+    <!--Specifies the language of the document's content as English -->
 <head>
+    <!-- contains meta-information about the document -->
     <meta charset="UTF-8">
+    <!-- Shows the character encoding for the HTML document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Ensures the webpage is responsive on different devices -->
     <title>busa0019 midterm</title>
+     <!-- Title of the document displayed in the browser's title bar or tab -->
     <link rel="stylesheet" href="css/reset.css"> 
+    <!-- Link to CSS file for resetting default browser styles -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Links to the main CSS stylesheet for the website -->
 </head>
+    
+<!-- Contains all the content of an HTML document, such as text, images, lists, etc. -->
 <body>
+    <!--  Main wrapper for the content, providing styling and layout -->
     <div class="main-container">
+    
+   <!-- Header Section: Contains the main heading and navigation -->
     <header>
+        <!-- Header image showcasing the theme of the website -->
         <img src="images/beach-wide.jpg" alt="Header Image">
+        <!-- Main title of the website -->
         <h1>Serenity Shores</h1>
     </header>
+
+    <!-- Navigation Bar: Provides links for user navigation through the site sections (Home, Story, Contact) -->
         <nav>
+            <!-- Unordered list used to contain navigation links -->
             <ul>
+                 <!-- Navigation link to the home section -->
                 <li><a href="#home">HOME</a></li>
+                 <!-- Navigation link to the story section -->
                 <li><a href="#story">STORY</a></li>
+                <!-- Navigation link to the contact section -->
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+        <!-- Main Content Section: Contains the core content of the webpage -->
         <main>
-        <!-- Article section with text wrapping around an image -->
+         <!-- Article Section: Detailed information about Serenity Shores -->
         <article id="story" class="clearfix">
+            <!-- Subheading introducing the article -->
             <h2><strong>Embrace the Calm</strong></h2>
+            <!-- Image related to the article content -->
             <img src="images/beach.jpg" alt="Serenity Shores" class="article-image">
-            <p>At Serenity Shores, we're not just a destination; we're a sanctuary where the seamless horizon meets the infinite sky, creating a symphony of nature's tranquility.Nestled along the pristine coastline, our beach serves as a peaceful retreat from the hustle and bustle of daily life, inviting you to immerse yourself in the serenity of the sea.Our shores are graced with the gentle whispers of waves, crafting melodies that soothe the soul and mend the spirit. Here, time slows, allowing moments of reflection, relaxation, and rejuvenation. The soft, golden sands beneath your feet, the salt-kissed air filling your lungs, and the warmth of the sun on your skin harmonize to create an ambiance of pure bliss.Serenity Shores is more than just a slice of paradise; it's a community deeply committed to the preservation of nature's beauty and the well-being of our planet. </p>
+            <!-- Paragraph providing detailed information about Serenity Shores -->
+            <p>At Serenity Shores, we're not just a destination; we're a sanctuary where the seamless horizon meets the infinite sky, creating a symphony of nature's tranquility. Nestled along the pristine coastline, our beach serves as a peaceful retreat from the hustle and bustle of daily life, inviting you to immerse yourself in the serenity of the sea. Our shores are graced with the gentle whispers of waves, crafting melodies that soothe the soul and mend the spirit. Here, time slows, allowing moments of reflection, relaxation, and rejuvenation. The soft, golden sands beneath your feet, the salt-kissed air filling your lungs, and the warmth of the sun on your skin harmonize to create an ambiance of pure bliss. Serenity Shores is more than just a slice of paradise; it's a community deeply committed to the preservation of nature's beauty and the well-being of our planet.Beyond the tranquil shores, our lush, verdant gardens offer a haven for diverse flora and fauna, serving as a living testament to the richness of the local ecosystem.</p> 
         </article>
     
-        <!-- Facts section using list -->
+        <!-- Facts Section: Provides interesting facts about Serenity Shores -->
         <section class="facts">
+            <!-- Heading for the facts section -->
             <h2><strong> Facts About Serenity Shores</strong></h2>
             <ul>
+                <!-- List of facts about Serenity Shores -->
                 <li>Serenity Shores is home to a diverse ecosystem, including playful dolphins and majestic sea turtles.</li>
                 <li>Our community is dedicated to sustainability, ensuring that the beauty of the beach is preserved for generations.</li>
                 <li>The beach is known for its spectacular sunsets, which paint the sky in a palette of extraordinary colors every evening.</li>
                 <li>Eco-Friendly Initiatives: At the forefront of eco-conscious living, Serenity Shores actively participates in beach clean-ups and coral reef restoration, contributing to the preservation and enhancement of our natural environment.</li>
                 <li>Community and Wellness Programs: Serenity Shores offers wellness programs that foster community and personal well-being, including sunrise yoga and guided meditation, connecting guests with nature and each other.</li>
             </ul>
-            </ul>
         </section>
     
-        <!-- Contact form with linked labels and inputs -->
+        <!-- Contact Form Section: Allows users to send messages -->
         <section id="contact" class="contact-section">
+            <!-- Heading for the contact section -->
             <h2 class="contact-heading"><strong>Contact to Learn More</strong></h2>
+            <!-- Form for submitting user information -->
             <form action="thanks.html" method="post">
+                <!-- Label for the name input field -->
                 <label for="name">Your Name</label>
+                <!-- Input field for the user's name -->
                 <input type="text" id="name" name="name" required>
-
+                 
+                <!-- Label for the email input field -->
                 <label for="email">Your Email</label>
+                <!-- Input field for the user's email -->
                 <input type="email" id="email" name="email" required>
-
+                
+                <!-- Label for the message input field -->
                 <label for="message">Your Message</label>
+                <!-- Input field for the user's message-->
                 <textarea id="message" name="message" required></textarea>
 
+               <!-- Radio Button Options: Allows the user to express their interest in visiting the Shores -->
                 <fieldset class="radio-buttons">
                     <legend>Would you like to visit the Shores?</legend>
                     <label><input type="radio" name="visit" value="yes" required> Yes</label>
@@ -61,11 +96,15 @@
                     <label><input type="radio" name="visit" value="maybe"> Maybe</label>
                 </fieldset>
 
+                <!-- Button to submit the form -->
                 <button type="submit">Send</button>
             </form>
         </section>
     </main>
+
+    <!-- Footer Section: Contains copyright information -->
     <footer>
+        <!-- Copyright text for Serenity Shores -->
         <p>&copy; Serenity Shores</p>
     </footer>
  </div>
