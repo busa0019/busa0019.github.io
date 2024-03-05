@@ -180,6 +180,7 @@ article {
     cursor: pointer; /* Cursor to pointer on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
     margin-bottom: 0; /* Remove  bottom margin  */
+    font-weight: bold; /*Bold the text inside the button*/
 }
 
 /* Hover effect for button */
@@ -206,6 +207,11 @@ article {
     margin-top: 10px; /*  Top margin for spacing after heading*/
 }
 
+p, .facts li, .contact-section label, .contact-section legend {
+    font-weight: bold; /* make text bold */
+}
+
+
 /* Footer styles */
 footer {
     text-align: right; /* Align text to the right */
@@ -213,6 +219,7 @@ footer {
     margin-top: 1rem;  /* Top margin */
     color: black;  /* Ensure text color is black */
 }
+
 
 
 
