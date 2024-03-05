@@ -123,7 +123,7 @@ article {
 .facts ul {
     list-style-type: disc; /* Style list items with discs */
     margin-left: 20px; /* Left margin for list */
-    padding-left: 0; /* Reset left padding  */
+    padding-left: 0; /* Reset left padding   */
 }
 
 .facts li {
