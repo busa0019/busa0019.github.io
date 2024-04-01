@@ -1,11 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Roboto&display=swap" rel="stylesheet">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>busa0019 Final </title>
+    <title>busa0019 Final</title> 
+
+    <script src="https://kit.fontawesome.com/5ff24fd2d1.js" crossorigin="anonymous"></script>
+
+    
+    
 </head>
 <body>
-    
+    <div class="global-container"> <!-- Start of the global grid container -->
+    <header class="mobile-header">
+        <div class="top-container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Three Star Media Logo" id="logo">
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#our-team">Team</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="images/main-banner.jpg" alt="Main Banner">
+            <div class="banner-content">
+                <h1>Welcome to Three Star Media</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laborum blanditiis voluptates nisi porro voluptate optio itaque ipsa eveniet qui, sed reiciendis voluptatem? Soluta sit, beatae vitae natus optio ullam!</p>
+                <a href="contact.html" class="connect-btn">Connect with us  <i class="fa-solid fa-caret-right"></i></a>
+            </div>
+        </div>
+        <section id="about-us" class="about-section">
+            <div class="about-image-container">
+                <img src="images/about-us.jpg" alt="About Us Image">
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id reiciendis, quo velit, natus similique error deleniti eaque dolor repudiandae asperiores doloribus!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id reiciendis, quo velit, natus similique error deleniti .</p>
+            </div>
+        </section>
+        <section id="services">
+            <h2 class="services-header">Our Services</h2>
+            <div class="services-list">
+                <article class="service-item" id="digital-transformation">
+                    <img src="images/digital.jpg" alt="Digital Transformation">
+                    <div class="service-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laboriosam accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="digital-plans.html" class="service-link">Digital Plans <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </article>
+                <article class="service-item" id="marketing">
+                    <img src="images/marketing.jpg" alt="Marketing">
+                    <div class="service-content">
+                        <h3>Marketing</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laboriosam accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="Marketing-plans.html" class="service-link">Marketing Plans <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </article>
+                <article class="service-item" id="video-production">
+                    <img src="images/video.jpg" alt="Video Production">
+                    <div class="service-content">
+                        <h3>Video Production</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laborios amus accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="Video-plans.html" class="service-link">Video Plans <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </article>
+                <article class="service-item" id="web-development">
+                    <img src="images/web.jpg" alt="Web Development">
+                    <div class="service-content">
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laboriosam accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="Web-plans.html" class="service-link">Web Plans <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </article>
+                <article class="service-item" id="print">
+                    <img src="images/print.jpg" alt="Print">
+                    <div class="service-content">
+                        <h3>Print</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laboriosam accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="Print-plans.html" class="service-link">Print Plans <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </article>
+                <article class="service-item" id="our-vision">
+                    <img src="images/vision.jpg" alt="Our Vision">
+                    <div class="service-content">
+                        <h3>Our Vision</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum, repellat deleniti officia possimus laboriosam accusamus delectus reiciendis aliquam necessitatibus voluptate atque quisquam ea modi corrupti minima quasi consequatur perferendis!</p>
+                        <a href="Learn-More.html" class="service-link">Learn More<i class="fa fa-caret-right"></i> </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="our-team">
+            <h2>Our Team</h2>
+            <div class="team-member" id="john-doe">
+                <img src="images/john.jpg" alt="John Doe">
+              <div class="content-wrapper">
+                <h3>John Doe</h3>
+                <p>CEO and Co-owner</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet itaque delectus sed. Sunt minus voluptate fuga alias, cumque tempore ad in. Inventore nihil adipisci aperiam quas laborum mollitia atque. Nobis?</p>
+            </div>
+        </div>
+            <div class="team-member" id="bob-rite">
+                <img src="images/bob.jpg" alt="Bob Rite">
+                <div class="content-wrapper">
+                <h3>Bob Rite</h3>
+                <p>CFO and Co-owner</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet itaque delectus sed. Sunt minus voluptate fuga alias, cumque tempore ad in. Inventore nihil adipisci aperiam quas laborum mollitia atque. Nobis?</p>
+            </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <div class="form-content">
+                <h3>Send us a message</h3>
+                <form action="#" method="post">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="hours-location-container">
+        <div class="hours-operation">
+            <h3>Hours of Operation</h3>
+            <table> <!-- Begin table for hours of operation -->
+                <tr> <!-- Table row for headings -->
+                    <th>Days</th> <!-- Table header for day column -->
+                    <th>Hours</th> <!-- Table header for hours column -->
+                </tr>
+                <tr> <!-- Table row for weekdays -->
+                    <td>Monday - Friday</td> <!-- Table cell for weekdays -->
+                    <td>9 AM - 6 PM</td> <!-- Table cell for weekday hours -->
+                </tr>
+                <tr> <!-- Table row for weekends -->
+                    <td>Saturday - Sunday</td> <!-- Table cell for weekends -->
+                    <td>Closed</td> <!-- Table cell for weekend hours -->
+                </tr>
+            </table>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22431.555641255694!2d-75.7930345!3d45.3499335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711562200580!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+        <div class="copyright">
+            <p>© Copyright Three Star Media, 2020</p>
+            <p>All images are taken from <span class="underline">Unsplash</span></p>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
