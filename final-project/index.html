@@ -1,15 +1,23 @@
 <!DOCTYPE html>
+<!-- Defines the document type and version of HTML -->
 <html lang="en">
+<!--Specifies the language of the document's content as English -->
+
 <head>
-    <!-- Fonts and Icons -->
+     <!-- contains meta-information  about the document , including links to stylesheets, scripts, and meta tags -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5ff24fd2d1.js" crossorigin="anonymous"></script>
+    <!-- Preconnect to Google Fonts and FontAwesome for faster loading of font and icon resources -->
 
     <!-- Meta Tags -->
+    <!-- Shows the character encoding for the HTML document -->
     <meta charset="UTF-8">
+     <!-- Ensures the webpage is responsive on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the document displayed in the browser's title bar or tab -->
     <title>busa0019 Final</title> 
 
     <!-- Note: Future CSS Link will be added here -->
@@ -17,14 +25,17 @@
     <!-- Note: Style .active class for navigation to indicate the current page -->
     <!-- Note: Customize .fa-solid icons color and size -->
 </head>
+<!-- Contains all the content of an HTML document, such as text, images, lists, etc. -->
 <body>
-    <!-- Global container setup for responsive grid layout -->
+    <!-- This div acts as the main container for the page, intended for applying a responsive grid layout -->
     <div class="global-container"> 
         <!-- Header with dynamic background color and padding adjustment -->
         <header class="mobile-header">
-            <!-- Logo container with flex display for alignment -->
+            <!-- Contain the Logo container and site navigation with flex display for alignment -->
             <div class="top-container">
+                  <!-- Container for the top part of the header-->
                 <div class="logo-container">
+                 <!-- Container for the website's logo -->
                     <img src="images/logo.png" alt="Three Star Media Logo" id="logo">
                 </div>
             </div>
@@ -45,6 +56,7 @@
                 <form action="/search" method="get">
                     <input type="text" placeholder="Search" name="search">
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- Input and button for search, with an icon from FontAwesome -->
                 </form>
             </div>
         </header>
@@ -54,9 +66,11 @@
             <!-- Banner area with absolute positioning for overlay text -->
             <div class="banner">
                 <img src="images/main-banner.jpg" alt="Main Banner">
+                <!-- Overlay content on the banner, such as title and CTA -->
                 <div class="banner-content">
                     <h1>Welcome to Three Star Media</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laborum blanditiis voluptates nisi porro voluptate optio itaque ipsa eveniet qui, sed reiciendis voluptatem? Soluta sit, beatae vitae natus optio ullam!</p>
+                    <!-- CTA button with FontAwesome icon -->
                     <a href="contact.html" class="connect-btn">Connect with us  <i class="fa-solid fa-caret-right"></i></a>
                 </div>
             </div>
@@ -158,20 +172,24 @@
                 <h2>Contact Us</h2>
                 <div class="form-content">
                     <h3>Send us a message</h3>
-                    <form action="#" method="post">
+                    <form action="#" method="post"> 
+                             
                         <!-- Form fields and submit button -->
                         <label for="full-name">Full Name</label>
                         <input type="text" id="full-name" name="full_name" required>
+                      
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
+                        
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                         <button type="submit">Send</button>
-                    </form>
+                        
+                     </form>
                 </div>
             </section>
         </main>
-
+        <!-- The footer contains site-wide information like contact details, operational hours, and copyright notices -->
         <!-- Footer with layout adjustments for hours of operation and location maps -->
         <footer>
             <!-- Hours of Operation and Location Information -->
@@ -199,6 +217,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22431.555641255694!2d-75.7930345!3d45.3499335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711562200580!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+                <!-- The copyright section provides legal information about content ownership and usage rights -->
                  <!--  copyright information with specific padding and text alignment -->
                 <div class="copyright">
                   <p>© Copyright Three Star Media, 2020</p>
