@@ -1,0 +1,956 @@
+.global-container {
+    display: grid;
+    grid-template-columns: 1fr min(95%, 1200px) 1fr;
+}
+  
+/* Targeting all direct children of global-container, spanning them to the middle column */
+.global-container > * {
+    grid-column: 2;
+}
+
+/* Base styles, mobile-first (no media query needed) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+  
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+  
+.wrapper {
+    margin: 0 auto;
+    padding: 0 20px; /* Adequate padding on smaller screens */
+    box-sizing: border-box;
+}
+
+/* Styles for the header */
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white;
+    padding: 1em 0; /* Padding at the top and bottom */
+}
+  
+.logo-container {
+    background-color: #C48E2B; /* Gold color for the logo container */
+    padding: 20px; /* Padding around the logo */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+/* Styles for the navigation menu */
+nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: #C48E2B;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+nav ul {
+    width: 100%; /* Full width of the nav container */
+}
+  
+nav li {
+    display: block;
+}
+  
+nav a {
+    display: block; /* Make links fill the li element */
+    padding: 1em; /* Padding for the links */
+    color:#C48E2B; /* Text color for the links */
+    text-decoration: none; /* Remove underlines from links */
+    text-align: center; /* Center text within the link */
+    background-color: #333; /* Dark background for the links */
+    border-top: 1px solid #C48E2B; /* Gold top border for separation */
+}
+nav a:first-child {
+    border-top: none;
+}
+  
+nav a:not(:last-child) {
+    border-bottom: 1px solid #C48E2B;
+}
+
+/* The active link style */
+.active {
+    background-color: #C48E2B;
+    color: #333; /* Dark text for the active link */
+}
+  
+/* Search bar styling */
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the search bar */
+    position: relative;
+}
+  
+.search-container form {
+    position: relative; /* Position the form relatively for absolute positioning the button inside it */
+    width: calc(100% - 2em);
+}
+  
+.search-container input[type="text"] {
+    width: 100%; /* Full width of the input */
+    padding: 0.5em; /* Padding inside the search input */
+    border: 2px solid #C48E2B; /* Gold-yellow border for the input */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    border-right: none; /* Remove right border */
+}
+  
+.search-container button {
+    position: absolute; /* Position the button absolutely inside the form */
+    right: 0; /* Align it to the right */
+    top: 0; /* Align it to the top */
+    width: 30px; /* Width of the button */
+    height: 100%; /* Height to match input field */
+    border: 2px solid #C48E2B; /* Gold-yellow border for the button */
+    border-left: none; /* Remove left border */
+    background-color: #333; /* Dark background for the button */
+    color: #C48E2B; /* Gold-yellow color for the icon */
+    padding: 10px; /* Padding to ensure the icon is centered */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer;
+}
+  
+.banner-content {
+    position: relative; /* Positioned relative to its normal position */
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Padding on the sides */
+    box-sizing: border-box; /* Include padding in the width */
+    text-align: left; /* Center text */
+}
+
+.banner h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-bottom: 30px; /* Adjust as needed */
+}
+
+.connect-btn {
+    display: inline-block;
+    background-color: #C48E2B; /* Button background color */
+    color: black; /* Button text color */
+    padding: 30px; /* Button padding */
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
+
+
+.banner {
+    display: flex;
+    justify-content: center; /* Center the .banner-content horizontally */
+    align-items: center; /* Align .banner-content vertically */
+    position: relative;
+    color: white;
+    background-image: url('../images/main-banner.jpg');
+    min-height: 400px; /* Or any other height that suits your design */
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Cover the entire banner area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+
+.banner img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    position: absolute; /* Make it cover the entire banner area */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send the image to the back */
+}
+
+.about-section {
+    background-color: #F4E2BA; /* Light yellow background */
+    padding: 50px 0; /* Top and bottom padding, no left and right padding */
+    text-align: left;
+}
+
+.about-section .container {
+    max-width: 100%; /* Set a max-width that matches your design */
+    margin: auto; /* Center the container */
+    display: flex; /* Align the image container and content side by side */
+    align-items: center;
+    gap: 5px; /* Creates a gap between the image and content */
+}
+
+.about-image-container {
+    flex: 1; /* Flex value to take available space */
+    padding: 20px;
+}
+
+.about-image-container img {
+    width: 100%; 
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    
+}
+
+.about-content {
+    padding: 30px; /* Padding inside the content area */
+   
+}
+
+.about-content h2 {
+    font-size: 50px; 
+    font-weight: bold; 
+    margin-bottom: 30px; 
+    color: #333; 
+}
+
+.about-content p {
+    font-size: 1em; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+.about-content p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+#services {
+    background-color: white;  
+    padding: 50px 0; 
+}
+
+#services .container {
+    max-width: 95%; 
+    margin: auto; 
+}
+
+#services .services-header {
+    text-align: left;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.2em; 
+    padding: 0 30px; 
+}
+
+#services .service-item {
+    background-color: #F4E2BA; 
+    margin-bottom: 30px;     
+}
+
+#services .service-item img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    margin-bottom: 1em; 
+}
+
+#services .service-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;  
+    margin-bottom: 20px; 
+}
+
+#services .service-item p {
+    margin-bottom: 1em; 
+}
+
+#services .service-link {
+    display: inline-block;
+    background-color: black; 
+    color: white; 
+    padding: 30px; 
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+#services .service-link:hover {
+    background-color: #b37d35;  
+}
+#services .service-content {
+    padding: 20px; 
+}
+#services .service-content h3 {
+    font-size: 1.5em; 
+    color: #333;  
+    margin-bottom: 20px; 
+}
+
+#services .service-content p {
+    font-size: 1em; 
+    margin-bottom: 20px; 
+}
+
+
+.service-item#our-vision {
+    background-color: transparent;  
+}
+
+
+
+.service-item#our-vision {
+    position: relative;
+  }
+  
+  
+  .service-item#our-vision img {
+    width: 100%;
+    height: auto;
+    display: block;  
+    
+  }
+  
+  
+  .service-item#our-vision .service-content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 95%; 
+    margin: 0 auto;
+    position: absolute;
+    padding: 20px; 
+  }
+
+  .service-item#our-vision {
+    width: calc(100% + 10%); 
+    transform: translateX(-5%);   
+  }
+  
+  
+  
+  .service-item#our-vision .service-content h3 {
+    font-size: 2.5em; 
+    margin-bottom: 0.5em;
+  }
+  
+ 
+  .service-item#our-vision .service-content p {
+    font-size: 1em; 
+    margin-bottom: 1em;
+  }
+  
+  
+  .service-item#our-vision .service-content .service-link {
+    display: inline-block;
+    background-color: #051d35; 
+    color: white;
+    padding: 30px;
+    text-decoration: none; 
+    font-weight: bold;
+    border: 2px solid #7a7154;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+  }
+  
+ 
+  .service-item#our-vision .service-content .service-link:hover {
+    background-color: #333; 
+  }
+  
+ 
+  .service-item#our-vision .service-content .service-link i {
+    margin-left: 10px; 
+  }
+  
+
+ .service-item#our-vision .service-content h3,
+ .service-item#our-vision .service-content p,
+ .service-item#our-vision .service-content .service-link {
+  color: white;
+ }
+
+
+
+
+ .service-item#our-vision .service-content h3,
+ .service-item#our-vision .service-content p,
+ .service-item#our-vision .service-content .service-link {
+  display: block; 
+  text-align: left; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .service-item#our-vision .service-content .service-link {
+    display: inline-block; 
+    padding: 40px; 
+  }
+
+
+  #our-team h2 {
+    text-align: left;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    padding: 0 30px; 
+  }
+  
+  .team-member {
+    grid-column: 2;
+    background-color:   #F4E2BA;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    margin-left: 20px;  
+  }
+  
+  .team-member img {
+    width: 100%; 
+    height: auto; 
+    display: block;  
+  }
+  
+  .content-wrapper {
+    text-align: left; 
+  }
+  
+  
+  .team-member .content-wrapper {
+    max-width: 1200px;
+    margin: auto;
+ }
+
+
+ .team-member .content-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+ }
+
+
+
+ .team-member .content-wrapper h3,
+ .team-member .content-wrapper p {
+    text-align: left;  
+ }
+
+ #our-team h2, .team-member h3, .team-member p {
+    padding-left: 30px; 
+    padding-right: 30px;
+ }
+
+ .team-member .content-wrapper h3,
+ .team-member .content-wrapper p {
+    padding-left: 0; 
+    padding-right: 0; 
+ }
+
+  
+
+  .team-member h3 {
+    font-size: 1.5em; 
+    font-weight: bold;
+    margin-top: 20px ;
+    margin-bottom: 10px; 
+  }
+  
+  .team-member p:first-of-type {
+    font-weight: bold;
+    border-bottom: 2px solid #C48E2B; 
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+  }
+  
+  .team-member p {
+    font-size: 1em; 
+   margin-bottom: 20px; 
+  }
+
+
+  #contact-us {
+    text-align: left; 
+    padding: 20px; 
+    
+ }
+
+ #contact-us h2 {
+    font-size: 36px;
+    font-weight: bold; 
+    margin-bottom: 0.5em; 
+ }
+
+ #contact-us h3 {
+    margin-bottom: 0.5em; 
+    font-weight: bold; 
+    font-size: 30px; 
+}
+
+ #contact-us form {
+   
+    display: grid;
+    gap: 20px; 
+ }
+
+ #contact-us label {
+    display: block; 
+    margin-bottom: 5px; 
+ }
+
+ #contact-us input[type="text"],
+ #contact-us input[type="email"],
+ #contact-us textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #000; 
+    border-radius: 5px; 
+    
+ }
+
+ #contact-us textarea {
+    resize: vertical; 
+    height: 150px; 
+ }
+
+ #contact-us button {
+    padding: 10px 20px; 
+    display: inline-block;
+    font-weight: bold;
+    background-color: #000; 
+    color: #C48E2B;; 
+    border: none; 
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: background-color 0.3s; 
+    justify-self: start;
+  }
+
+ #contact-us button:hover {
+    background-color: #b37d35; 
+ }
+
+
+  
+  
+
+  .hours-operation,
+  .location {
+  max-width: 95%;
+  margin: 0 auto; 
+  }
+
+ .hours-operation h3 {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 15px; 
+ }
+
+
+ .hours-operation table {
+    border-collapse: collapse;
+    width: 100%;
+   
+ }
+
+
+ .hours-operation th {
+    background-color: #F4E2BA; 
+    color: #333; 
+    text-align: center; 
+    border: 1px solid #333;
+    padding: 8px;
+ }
+
+
+ .hours-operation td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left; /* Left-aligned text for data cells */
+    background-color: #FFFFFF; /* White background for data cells */
+ }
+
+
+
+ .location h3 {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 15px; 
+ }
+
+ .location iframe {
+    width: 100%;
+    height: 450px; 
+    border: 0; 
+    margin-top: 10px; 
+ }
+
+
+
+ .copyright {
+    background-color: #000; 
+    padding: 20px 50px; 
+    text-align: left; 
+    width: calc(100% + 10%); 
+    transform: translateX(-5%); 
+ }
+
+
+ .copyright p {
+    color: #C48E2B; 
+    padding: 20px ; 
+    
+ }
+
+
+ .underline{
+    text-decoration: underline; 
+    color: #C48E2B; 
+ }
+
+
+
+
+
+ button,
+ input[type="submit"],
+ .service-link { 
+    display: inline-block;  
+     /* margin-top: 20px;     */
+    text-align: center; 
+ }
+
+
+.service-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;   
+}
+
+
+
+@media screen and (min-width: 760px) {
+    .search-container {
+        display: flex; /* Use flexbox for internal alignment */
+        justify-content: flex-end; /* Aligns search to the right */
+    }
+
+    .search-container form {
+        display: flex; /* Aligns the search input and button in a row */
+        flex-grow: 0; /* Prevents the search form from taking up unnecessary space */
+    }
+
+    /* Make sure the logo, nav, and search-container are vertically aligned */
+    header > * {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Additional styles for the input and button if needed */
+    .search-container input[type="text"],
+    .search-container button {
+        height: 40px; /* Adjust the height as needed */
+    }
+
+    /* Ensure that the elements do not wrap on the same line */
+    .logo-container, nav, .search-container {
+        flex-shrink: 0;
+    }
+
+    /* If you have specific margins or padding you want to ensure consistency */
+    .logo-container, nav ul li, .search-container {
+        margin-right: 20px; /* Adjust the spacing to your liking */
+    }
+
+    /* To prevent the last margin-right from pushing layout, set margin-right to 0 for the search-container */
+    .search-container {
+        margin-right: 0;
+        margin-right: 20px;
+    }
+
+
+    header {
+        display: flex;
+        align-items: center; /* Align the items vertically */
+        justify-content: space-between; /* Space between logo, nav, and search */
+        padding: 0.5em 2em;
+    }
+
+    
+
+    nav {
+        display: flex; /* Enables flexbox */
+        background-color: transparent;
+        margin: 0 1em; /* Adds margin to the left and right of the nav */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1em; /* Adds gap between navigation items */
+        list-style: none; /* Removes bullet points */
+        padding: 0; /* Resets padding */
+        margin: 0; /* Resets margin */
+        align-items: center; /* Align the nav items vertically */
+    }
+
+    nav li {
+        
+    }
+
+    nav a {
+        color: #fff; /* Ensures text is white for visibility */
+        text-decoration: none; /* Removes underline from links */
+    }
+
+    nav ul li {
+        border: none; /* Removes borders from list items */
+        background: none; /* Removes any background images or colors that might be causing lines */
+    }
+
+
+    .banner-content {
+        position: absolute;
+        bottom: 10%; /* Adjust this to align it vertically as you like */
+        left: 0;
+        right: 0;
+        
+        width: calc(100% - 60px); /* Subtract the total amount of left and right margins */
+        /* Or the max-width that matches your design preference */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7); /* For a darker overlay */
+        text-align: left;
+        color: white;
+        /* Remove the box-shadow if it's not needed */
+        /* Add border-radius if you want rounded corners */
+    }
+    
+        
+    
+    /* The .banner-content should start where the logo starts and end where the search box ends */
+    /* You should adjust the padding or margin of the .banner and .header elements to match the mockup */
+    
+    /* Adjust the font sizes for desktop */
+    .banner h1 {
+        font-size: 4em; /* Adjust the font size for desktop */
+        margin-bottom: 0.5em; /* Space below the headline */
+    }
+    
+    .banner p {
+        font-size: 1.2em; /* Adjust the font size for desktop */
+        margin-bottom: 1em; /* Space below the paragraph */
+    }
+    
+    .connect-btn {
+        display: inline-block;
+        background-color: #C48E2B; /* Button background color */
+        color: black; /* Button text color */
+        padding: 30px; /* Button padding */
+        text-decoration: none;
+        font-weight: bold;
+        border: none;
+         /* Optional: rounded corners for the button */
+        transition: background-color 0.3s ease; 
+    }
+    
+    .connect-btn:hover {
+        background-color: #a76c2f; /* Darken the button on hover for interaction feedback */
+    }
+    
+    /* Make sure the .banner-content top aligns with the bottom of the header/nav bar */
+    .header, .nav {
+        /* These styles should ensure the header/nav is at the top of the page */
+        position: relative; /* Ensure that the position is set to relative for z-index stacking */
+        z-index: 10; 
+        padding-left: 30px; /* Match this to the banner-content's side padding */
+        padding-right: 30px; /* Higher z-index to stack above the .banner-content */
+    }
+    
+    .banner {
+        position: relative; /* Maintain the relative positioning */
+        overflow: hidden; /* Ensure no content spills out */
+        /* Other banner styles remain unchanged */
+    }
+
+
+        .about-section {
+            padding: 50px 0; /* Adjust padding as necessary */
+            background-color: #F4E2BA; /* Keep your background color as is */
+            text-align: left;
+        }
+    
+        .about-section .wrapper {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically center the items */
+            justify-content: space-between; /* Add space between the image and text */
+            max-width: 1200px; /* Or whatever maximum width you prefer */
+            margin: 0 auto; /* Center the wrapper if there's extra space on the sides */
+        }
+    
+        .about-image-container,
+        .about-content {
+            flex: 1; /* Both children will grow and take up equal space */
+        }
+    
+        .about-image-container {
+            margin-right: 20px; /* Add some margin to separate the image from the text */
+        }
+    
+        .about-content {
+            /* If you want to limit the width of the text to make it more readable: */
+            max-width: 600px; /* Or whatever width works for your design */
+        }
+    
+        .about-content h2 {
+            font-size: 2rem; /* Adjust font size as necessary */
+            margin-bottom: 1rem; /* Space below the heading */
+        }
+    
+        .about-content p {
+            font-size: 1rem; /* Adjust font size as necessary */
+            margin-bottom: 1rem; /* Space below each paragraph */
+        }
+    
+   
+    #services .services-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Create 6 columns */
+        gap: 20px; /* This adds spacing between your grid items */
+    }
+
+    #services .service-item {
+        background-color: #F4E2BA; /* Background color for the items */
+        margin-bottom: 30px; /* Space below each item */
+    }
+
+    /* Target the first two service items for 50-50 split */
+    #services .service-item:nth-of-type(1) {
+        grid-column: span 3; /* Take up half the space (3 out of 6 columns) */
+    }
+
+    #services .service-item:nth-of-type(2) {
+        grid-column: span 3; /* Take up the remaining half */
+    }
+
+    /* Target the bottom three service items to split the space into thirds */
+    #services .service-item:nth-of-type(n+3) {
+        grid-column: span 2; /* Each takes up one-third of the space (2 out of 6 columns) */
+    }
+
+ /* Target 'Our Vision', assuming it's the sixth item */
+ #services .service-item:nth-child(6) {
+    grid-column: 1 / -1; /* Span all columns */
+    background-color: white;
+}
+
+#our-team .wrapper {
+    max-width: 1200px;
+    margin: auto; /* Center the wrapper */
+    padding: 0 ; /* Optional: Padding on the sides of the wrapper */
+}
+
+#our-team .team-member {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align the image and content vertically */
+    background-color: #F4E2BA; /* Background color for the items */
+     /* Space below each team member */
+    padding: 0px; /* Padding inside each team member */
+}
+
+#our-team .team-member img {
+    width: 50%; /* Set width to fill half the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin: 0;
+}
+
+#our-team .content-wrapper {
+    padding: 20px; /* Add padding inside the content area */
+    margin-top: -20px;
+    flex-grow: 1; /* Take up the remaining space in the flex container */
+}
+#our-team .team-member:nth-of-type(1) {
+    margin-bottom: 0px; /*No space below the first team member */
+}
+
+#our-team .team-member:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+#our-team h2 {
+   
+    margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
+}
+
+.hours-location-container {
+    display: flex;
+  
+    flex-wrap: wrap; /* Allows elements to wrap as needed */
+    align-items: flex-start; /* Aligns children (form and location) to the top */
+    justify-content: space-between; /* Places space between the form and location */
+  }
+
+  .form-content, .location {
+    flex: 0 0 calc(50% - 20px); /* Takes up 50% of the container minus the desired spacing */
+  max-width: calc(50% - 20px); /* Ensures they do not grow beyond 50% minus the desired spacing */
+}
+#contact-us h3 {
+    margin-bottom: 35px; /* Reduces space below the heading to bring it closer to the form elements */
+}
+
+
+#contact-us h2 {  
+    transform: translateX(-20px); /* Shift the entire header slightly to the left */
+}
+
+  /* If you need to push the location up right beside the contact form, you might need to adjust margins/padding */
+  /* Adjusted .form-content to shift slightly to the left */
+.form-content {
+    transform: translateX(-19px);/* Negative margin to shift left */
+    margin-bottom: 0; /* Removes bottom margin if any */
+}
+
+  .location {
+    margin-left: auto; /* Pushes the location to the right side */
+   /* 
+    Using a large negative margin-top to align this element correctly with the form-content.
+    This method was chosen after other flexbox adjustments did not provide the correct visual alignment.
+    Please review this setting if layout changes are made to the form-content or location elements.
+    */
+    margin-top: -550px;  /* Moves the location up by its own height */
+    margin-right: 0; /* Ensures no margin on the right side */
+  }
+
+  /* Ensures Hours of Operation takes full width and is ordered last */
+  .hours-operation {
+    flex: 1 0 100%; /* Takes full width */
+    max-width: 100%; /* Ensures full width */
+    order: 3; /* Makes sure it comes last */
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+ 
+ 
+/* TEMP FIX: Adjusted hours-operation due to excess space above. 
+   Negative translateY used as a quick fix. Needs proper debugging to find the root cause. */
+   /* .hours-operation {
+    transform: translateY(-400px); 
+} */
+
+
+/* Applies margins to the copyright div */
+.copyright p{
+    padding-left: 3px; /* Add space above the copyright div */
+}
+
+.copyright {
+    margin-bottom: 30px; /* Add space above the copyright div */
+}
+}
+
