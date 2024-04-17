@@ -582,7 +582,7 @@ nav a:not(:last-child) {
     justify-content: center;   
 }
 
-
+/* Desktop  styles: these kick in for screens wider than 760px */
 @media screen and (min-width: 760px) {
     .search-container {
         display: flex; /* Utilizes flexbox to control layout within the search container */
