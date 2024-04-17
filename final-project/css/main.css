@@ -291,19 +291,20 @@ nav a:not(:last-child) {
 
 
 #services .service-content p {
-    font-size: 1em;
-    color: #222;
-    margin-bottom: 20px;
+    font-size: 1em;/* font size for paragraph */
+    color: #222; /* Dark grey color for improved readability */
+    margin-bottom: 20px; /* Space below paragraphs to separate from other content */
 }
 
 #services .service-content {
-    padding: 20px; 
+    padding: 20px;/* Uniform padding inside the container for spacing */
 }
 #services .service-content h3 {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 20px;
+    font-size: 2em;/* Double the standard text size for clear hierarchy */
+    color: #222; /* Dark grey color for heading, matching the paragraph color for consistency */
+    margin-bottom: 20px;/* Space below the heading to separate from the paragraph */
 }
+
 
 #services .service-link {
     display: inline-block;/* Allows block-level styling with inline behavior */
@@ -316,9 +317,11 @@ nav a:not(:last-child) {
     border: none;/* No border for the link/button */
     margin-top: 20px;/* Space above the link/button */
     transition: background-color 0.3s ease;/* Smooth color change effect on hover */
+    display: inline-block; /* Allows the link to have block properties but flow like inline */
+    padding: 30px; /* Padding inside the link */
 }
 #services .service-link i {
-    font-size: 2em; 
+    font-size: 2em; /* font size for the icon inside the button */
 }
 
 #services .service-link:hover {
@@ -326,101 +329,57 @@ nav a:not(:last-child) {
 }
 
 
-
 .service-item#our-vision {
-    background-color: transparent;  
+    background-color: transparent; /* Transparent background for the vision section */ 
+    width: calc(100% + 10%); /* Width slightly larger than its container to stand out */
+    transform: translateX(-5%); /* Correctly centering the extended width */
 }
 
-
-
-.service-item#our-vision {
-    position: relative;
-  }
-  
-  
   .service-item#our-vision img {
-    width: 100%;
-    height: auto;
-    display: block;  
-    
+    width: 100%;/* Full width to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;  /* Ensures the image is displayed as a block */  
+    max-height: 300px; /* Limiting the maximum height for better aesthetic balance */
   }
-  
   
   .service-item#our-vision .service-content {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    max-width: 95%; 
-    margin: 0 auto;
-    position: absolute;
-    padding: 20px; 
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%);/* Offset the position to truly center the content */
+    width: 95%;  /* Slightly less than the full width for padding effect */
+    margin: 0 auto; /* Horizontally centers the content */
+    position: absolute;/* Absolute position to place it over the image */
+    padding: 18px; /* Internal spacing */
   }
 
-  .service-item#our-vision {
-    width: calc(100% + 10%); 
-    transform: translateX(-5%);   
+  .service-item#our-vision h3 {
+    font-size: 2.5em; /* Large font size for heading */
+    margin-bottom: 0.5em;/* Space below the heading */
+    color: white; /* Text color */
   }
   
+  .service-item#our-vision  p {
+    font-size: 1em; /* font size for paragraph */
+    margin-bottom: 1em;/* Space below the paragraph */
+    color: white; /* Text color */
+  }
   
-  
-  .service-item#our-vision .service-content h3 {
-    font-size: 2.5em; 
-    margin-bottom: 0.5em;
+  .service-item#our-vision  .service-link {
+    background-color: #051d35; /* Dark blue background for the button *
+    color: white; /* White text for contrast */
+    text-decoration: none; /* No underline for the link */
+    font-weight: bold;/* Bold font for emphasis */
+    border: 2px solid #c78c06;/* Border color to match the theme */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+   margin-bottom: 1em;/* Space below the button */
   }
   
  
-  .service-item#our-vision .service-content p {
-    font-size: 1em; 
-    margin-bottom: 1em;
-  }
-  
-  
-  .service-item#our-vision .service-content .service-link {
-    display: inline-block;
-    background-color: #051d35; 
-    color: white;
-    padding: 30px;
-    text-decoration: none; 
-    font-weight: bold;
-    border: 2px solid #7a7154;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; 
-  }
-  
- 
-  .service-item#our-vision .service-content .service-link:hover {
-    background-color: #333; 
-  }
-  
- 
-  .service-item#our-vision .service-content .service-link i {
-    margin-left: 10px; 
-  }
-  
-
- .service-item#our-vision .service-content h3,
- .service-item#our-vision .service-content p,
- .service-item#our-vision .service-content .service-link {
-  color: white;
- }
-
-
-
-
- .service-item#our-vision .service-content h3,
- .service-item#our-vision .service-content p,
- .service-item#our-vision .service-content .service-link {
-  display: block; 
-  text-align: left; 
-  margin-left: auto;
-  margin-right: auto;
+  .service-item#our-vision  .service-link:hover {
+    background-color: #c78c06; /* Gold color on hover for visual feedback */
 }
 
- .service-item#our-vision .service-content .service-link {
-    display: inline-block; 
-    padding: 40px; 
-  }
+   
 
 
   #our-team h2 {
