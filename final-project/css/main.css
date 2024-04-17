@@ -560,7 +560,7 @@ nav a:not(:last-child) {
 
 
  .underline{
-    text-decoration: underline; /* Adds an underline to the text for emphasis or distinction */
+   text-decoration: underline; /* Adds an underline to the text for emphasis or distinction */
     color: #c78c06; /* Sets the text color to a specific shade of orange for visual consistency or highlighting */
 }
 
@@ -585,19 +585,19 @@ nav a:not(:last-child) {
 
 @media screen and (min-width: 760px) {
     .search-container {
-        display: flex; /* Use flexbox for internal alignment */
-        justify-content: flex-end; /* Aligns search to the right */
+        display: flex; /* Utilizes flexbox to control layout within the search container */
+        justify-content: flex-end; /* Positions the search form towards the right end of its container */
     }
 
     .search-container form {
-        display: flex; /* Aligns the search input and button in a row */
-        flex-grow: 0; /* Prevents the search form from taking up unnecessary space */
+        display: flex; /* Sets the form elements in a row using flexbox */
+        flex-grow: 0; /* Prevents the form from expanding beyond its content size */
     }
 
-    /* Make sure the logo, nav, and search-container are vertically aligned */
-    header > * {
-        display: flex;
-        align-items: center;
+       /* Ensures vertical alignment of all immediate children in the header */
+       header > * {
+        display: flex; /* Enables flexbox to align elements horizontally */
+        align-items: center; /* Centers elements vertically within the header */
     }
 
     /* Additional styles for the input and button if needed */
@@ -606,54 +606,45 @@ nav a:not(:last-child) {
         height: 40px; /* Adjust the height as needed */
     }
 
-    /* Ensure that the elements do not wrap on the same line */
-    .logo-container, nav, .search-container {
-        flex-shrink: 0;
+     /* Ensures items do not wrap and are flexibly laid out */
+     .logo-container, nav, .search-container {
+        flex-shrink: 0; /* Prevents the elements from shrinking below their content size */
+      
     }
 
-    /* If you have specific margins or padding you want to ensure consistency */
+  
     .logo-container, nav ul li, .search-container {
-        margin-right: 20px; /* Adjust the spacing to your liking */
+        margin-right: 20px; /* Uniform right margin for alignment */
+        margin-left: 2px;
     }
 
     /* To prevent the last margin-right from pushing layout, set margin-right to 0 for the search-container */
     .search-container {
         margin-right: 0;
-        margin-right: 20px;
+        margin-right: 20px; /* Ensures the search container aligns correctly with other header elements */
     }
 
 
     header {
-        display: flex;
-        align-items: center; /* Align the items vertically */
-        justify-content: space-between; /* Space between logo, nav, and search */
-        padding: 0.5em 2em;
+        display: flex; /* Enables flexible layout of child elements */
+        align-items: center; /* Vertically aligns elements within the header */
+        justify-content: space-between; /* Distributes space between elements */
+        padding: 0.5em 2em; /* Padding around the header */
     }
 
-    
-
     nav {
-        display: flex; /* Enables flexbox */
-        background-color: transparent;
-        margin: 0 1em; /* Adds margin to the left and right of the nav */
+        display: flex; /* Utilizes flexbox for layout */
+        background-color: transparent; /* Maintains transparency for aesthetic purposes */
+        margin: 0 1em; /* Margin on both sides of navigation */
     }
 
     nav ul {
-        display: flex;
-        gap: 1em; /* Adds gap between navigation items */
-        list-style: none; /* Removes bullet points */
-        padding: 0; /* Resets padding */
-        margin: 0; /* Resets margin */
-        align-items: center; /* Align the nav items vertically */
-    }
-
-    nav li {
-        
-    }
-
-    nav a {
-        color: #fff; /* Ensures text is white for visibility */
-        text-decoration: none; /* Removes underline from links */
+        display: flex; /* Sets navigation items in a row */
+        gap: 1em; /* Spaces between each navigation item */
+        list-style: none; /* Removes default list styling */
+        padding: 0; /* Resets padding to 0 */
+        margin: 0; /* Resets margin to 0 */
+        align-items: center; /* Centers items vertically within the navigation */
     }
 
     nav ul li {
@@ -663,29 +654,26 @@ nav a:not(:last-child) {
 
 
     .banner-content {
-        position: absolute;
-        bottom: 10%; /* Adjust this to align it vertically as you like */
+        position: relative; /* Positions content over the background */
+        bottom: 10%; /* Distance from the bottom of the banner */
         left: 0;
         right: 0;
-        
-        width: calc(100% - 60px); /* Subtract the total amount of left and right margins */
-        /* Or the max-width that matches your design preference */
+        width: calc(100% - 60px); /* Width adjusted by subtracting margins */
         margin-left: auto;
         margin-right: auto;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.7); /* For a darker overlay */
-        text-align: left;
-        color: white;
-        /* Remove the box-shadow if it's not needed */
-        /* Add border-radius if you want rounded corners */
+        padding: 20px; /* Padding inside the banner content */
+        text-align: left; /* Aligns text to the left */
+        color: white; /* Text color for readability */
+        z-index: 1;
     }
     
+    .banner::before {
+       margin-left: 50px;
+       margin-right:20px;
         
+    }
     
-    /* The .banner-content should start where the logo starts and end where the search box ends */
-    /* You should adjust the padding or margin of the .banner and .header elements to match the mockup */
     
-    /* Adjust the font sizes for desktop */
     .banner h1 {
         font-size: 4em; /* Adjust the font size for desktop */
         margin-bottom: 0.5em; /* Space below the headline */
@@ -698,21 +686,19 @@ nav a:not(:last-child) {
     
     .connect-btn {
         display: inline-block;
-        background-color: #C48E2B; /* Button background color */
-        color: black; /* Button text color */
-        padding: 30px; /* Button padding */
-        text-decoration: none;
-        font-weight: bold;
-        border: none;
-         /* Optional: rounded corners for the button */
-        transition: background-color 0.3s ease; 
+        background-color: #C48E2B; /* Background color */
+        color: black; /* Text color */
+        padding: 30px; /* Internal padding */
+        text-decoration: none; /* No underline */
+        font-weight: bold; /* Bold text */
+        border: none; /* No border */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     }
     
     .connect-btn:hover {
         background-color: #a76c2f; /* Darken the button on hover for interaction feedback */
     }
     
-    /* Make sure the .banner-content top aligns with the bottom of the header/nav bar */
     .header, .nav {
         /* These styles should ensure the header/nav is at the top of the page */
         position: relative; /* Ensure that the position is set to relative for z-index stacking */
@@ -721,24 +707,24 @@ nav a:not(:last-child) {
         padding-right: 30px; /* Higher z-index to stack above the .banner-content */
     }
     
-    .banner {
-        position: relative; /* Maintain the relative positioning */
-        overflow: hidden; /* Ensure no content spills out */
-        /* Other banner styles remain unchanged */
-    }
+   /* General banner container styles with  */
+  .banner {
+    position: relative;
+    overflow: hidden; /* Prevents overflow of child elements */
+  }
 
-
+     /* Padding provides space at the top and bottom of the section, with text aligned to the left */
         .about-section {
-            padding: 50px 0; /* Adjust padding as necessary */
-            background-color: #F4E2BA; /* Keep your background color as is */
+            padding: 50px 0; 
             text-align: left;
         }
     
+        /* Flex container setup for the About section wrapper to center items and space them appropriately */
         .about-section .wrapper {
             display: flex; /* Use flexbox for layout */
             align-items: center; /* Vertically center the items */
             justify-content: space-between; /* Add space between the image and text */
-            max-width: 1200px; /* Or whatever maximum width you prefer */
+            max-width: 1200px; /* maximum width you prefer */
             margin: 0 auto; /* Center the wrapper if there's extra space on the sides */
         }
     
@@ -750,10 +736,8 @@ nav a:not(:last-child) {
         .about-image-container {
             margin-right: 20px; /* Add some margin to separate the image from the text */
         }
-    
-        .about-content {
-            /* If you want to limit the width of the text to make it more readable: */
-            max-width: 600px; /* Or whatever width works for your design */
+        .about-image-container img {
+            margin-left: 10px;/* Additional left margin on the image itself for fine-tuned alignment */
         }
     
         .about-content h2 {
@@ -766,37 +750,50 @@ nav a:not(:last-child) {
             margin-bottom: 1rem; /* Space below each paragraph */
         }
     
-   
+   /* Grid container for services list with 6 equal columns and consistent gap between grid items */
     #services .services-list {
         display: grid;
-        grid-template-columns: repeat(6, 1fr); /* Create 6 columns */
-        gap: 20px; /* This adds spacing between your grid items */
+        grid-template-columns: repeat(6, 1fr); /* Creates a 6-column layout */
+        gap: 20px; /* Sets spacing between grid items */
     }
-
+    #services .service-link {
+        display: block;
+    }
+    
     #services .service-item {
-        background-color: #F4E2BA; /* Background color for the items */
-        margin-bottom: 30px; /* Space below each item */
+          margin-bottom: 30px; /* Space below each item */
     }
 
     /* Target the first two service items for 50-50 split */
-    #services .service-item:nth-of-type(1) {
-        grid-column: span 3; /* Take up half the space (3 out of 6 columns) */
-    }
-
-    #services .service-item:nth-of-type(2) {
-        grid-column: span 3; /* Take up the remaining half */
-    }
+  /* Specific grid span for the first two service items to equally divide them over the first row */
+#services .service-item:nth-of-type(1),
+#services .service-item:nth-of-type(2) {
+    grid-column: span 3; /* Each item takes up half of the grid (3 out of 6 columns) */
+}
 
     /* Target the bottom three service items to split the space into thirds */
     #services .service-item:nth-of-type(n+3) {
         grid-column: span 2; /* Each takes up one-third of the space (2 out of 6 columns) */
     }
 
- /* Target 'Our Vision', assuming it's the sixth item */
+    #services .service-content h3 {
+        padding: 20px;
+        font-size: 1.5em;
+    }
+    #services .service-item {
+        margin-bottom: 0;      
+    }
+    
+
+ /* Target 'Our Vision',  it's the sixth item */
  #services .service-item:nth-child(6) {
-    grid-column: 1 / -1; /* Span all columns */
-    background-color: white;
+    grid-column: 1 / -1; /* Spans from the first to the last column of the grid */
+    background-color: white; /* Sets a white background, making it stand out from other items */
 }
+.service-item#our-vision .service-content .service-link {
+    display: inline-block;
+  }
+
 
 #our-team .wrapper {
     max-width: 1200px;
@@ -807,7 +804,7 @@ nav a:not(:last-child) {
 #our-team .team-member {
     display: flex; /* Use flexbox for layout */
     align-items: flex-start; /* Align the image and content vertically */
-    background-color: #F4E2BA; /* Background color for the items */
+    background-color: #ffe6ac; /* Background color for the items */
      /* Space below each team member */
     padding: 0px; /* Padding inside each team member */
 }
@@ -833,8 +830,7 @@ nav a:not(:last-child) {
 }
 
 #our-team h2 {
-   
-    margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
+    margin-bottom: 5px; /* Adjust this value to increase or decrease the space */
 }
 
 .hours-location-container {
@@ -903,3 +899,4 @@ nav a:not(:last-child) {
 }
 }
 
+}
