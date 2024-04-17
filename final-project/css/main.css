@@ -531,38 +531,38 @@ nav a:not(:last-child) {
 
 
  .location h3 {
-    font-size: 24px; 
-    font-weight: bold;
-    margin-bottom: 15px; 
- }
+    font-size: 24px; /* Large font size for visibility */
+    font-weight: bold; /* Bold font weight for emphasis */
+    margin-bottom: 15px; /* Space below the header for separation */
+}
 
  .location iframe {
-    width: 100%;
-    height: 450px; 
-    border: 0; 
-    margin-top: 10px; 
- }
+    width: 100%; /* Ensures the iframe takes full width of its container */
+    height: 450px; /* Fixed height for adequate display of the map */
+    border: 0; /* Removes border around the iframe for a cleaner look */
+    margin-top: 10px; /* Space above the iframe for visual separation */
+}
 
- .copyright {
-    background-color: #000; 
-    padding: 20px 50px; 
-    text-align: left; 
-    width: calc(100% + 10%); 
-    transform: translateX(-5%); 
- }
+/* Styling for the copyright section */
+ .copyright { 
+    background-color: #222; /* Black background for contrast */
+    padding: 20px ; /* Padding for internal spacing */
+    text-align: left; /* Aligns text to the left */
+    width: calc(100% + 10%); /* Width slightly more than its container to create a stretched effect */
+    transform: translateX(-5%); /* Horizontally shifts the section to center it */
+}
 
 
  .copyright p {
-    color: #C48E2B; 
-    padding: 20px ; 
-    
- }
+    color: #c78c06; /* color for text to stand out against the black background */
+    padding: 20px; /* Padding around text for comfortable reading */
+}
 
 
  .underline{
-    text-decoration: underline; 
-    color: #C48E2B; 
- }
+    text-decoration: underline; /* Adds an underline to the text for emphasis or distinction */
+    color: #c78c06; /* Sets the text color to a specific shade of orange for visual consistency or highlighting */
+}
 
 
 
