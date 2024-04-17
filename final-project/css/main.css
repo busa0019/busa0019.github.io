@@ -1,3 +1,4 @@
+/* Sets up a grid container with three columns, central column takes most of the space */
 .global-container {
     display: grid;
     grid-template-columns: 1fr min(95%, 1200px) 1fr;
@@ -35,9 +36,9 @@ header {
 }
   
 .logo-container {
-    background-color: #C48E2B; /* Gold color for the logo container */
+    background-color: #c78c06; /* Gold color for the logo container */
     padding: 20px; /* Padding around the logo */
-    display: flex; /* Use flexbox for layout */
+    display: flex; /*  flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: space-between;
     margin-left: 20px;
@@ -49,7 +50,7 @@ nav {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
-    background-color: #C48E2B;
+    background-color: #c78c06;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -65,29 +66,29 @@ nav li {
 nav a {
     display: block; /* Make links fill the li element */
     padding: 1em; /* Padding for the links */
-    color:#C48E2B; /* Text color for the links */
+    color:#c78c06; /* Text color for the links */
     text-decoration: none; /* Remove underlines from links */
     text-align: center; /* Center text within the link */
     background-color: #333; /* Dark background for the links */
-    border-top: 1px solid #C48E2B; /* Gold top border for separation */
+    border-top: 1px solid #c78c06; /* Gold top border for separation */
 }
 nav a:first-child {
     border-top: none;
 }
   
 nav a:not(:last-child) {
-    border-bottom: 1px solid #C48E2B;
+    border-bottom: 1px solid #c78c06;
 }
 
 /* The active link style */
 .active {
-    background-color: #C48E2B;
+    background-color: #c78c06;
     color: #333; /* Dark text for the active link */
 }
   
 /* Search bar styling */
 .search-container {
-    display: flex; /* Use flexbox for layout */
+    display: flex; /* Using flexbox for layout */
     justify-content: center; /* Center the search bar */
     position: relative;
 }
@@ -100,79 +101,110 @@ nav a:not(:last-child) {
 .search-container input[type="text"] {
     width: 100%; /* Full width of the input */
     padding: 0.5em; /* Padding inside the search input */
-    border: 2px solid #C48E2B; /* Gold-yellow border for the input */
-    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    /*border: 2px solid #C48E2B;  Gold-yellow border for the input */
+    /*border-radius: 5px 0 0 5px;  Rounded corners on the left side */
     border-right: none; /* Remove right border */
 }
-  
+                                                                                            
 .search-container button {
     position: absolute; /* Position the button absolutely inside the form */
     right: 0; /* Align it to the right */
     top: 0; /* Align it to the top */
     width: 30px; /* Width of the button */
     height: 100%; /* Height to match input field */
-    border: 2px solid #C48E2B; /* Gold-yellow border for the button */
-    border-left: none; /* Remove left border */
+    border: 2px solid #c78c06; /* Gold-yellow border for the button */
+   /* border-left: none;  Remove left border */
     background-color: #333; /* Dark background for the button */
-    color: #C48E2B; /* Gold-yellow color for the icon */
+    color: #c78c06; /* Gold-yellow color for the icon */
     padding: 10px; /* Padding to ensure the icon is centered */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+   /*  border-radius: 0 5px 5px 0; Rounded corners on the right side */
     cursor: pointer;
 }
-  
-.banner-content {
-    position: relative; /* Positioned relative to its normal position */
-    width: 100%; /* Full width */
-    padding: 0 20px; /* Padding on the sides */
-    box-sizing: border-box; /* Include padding in the width */
-    text-align: left; /* Center text */
-}
 
-.banner h1 {
-    font-size: 70px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-.banner p {
-    font-size: 20px;
-    margin-bottom: 30px; /* Adjust as needed */
-}
-
-.connect-btn {
-    display: inline-block;
-    background-color: #C48E2B; /* Button background color */
-    color: black; /* Button text color */
-    padding: 30px; /* Button padding */
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-}
-
-
+/* Sets up a flexible display container to center the banner content horizontally and vertically */
 .banner {
-    display: flex;
-    justify-content: center; /* Center the .banner-content horizontally */
-    align-items: center; /* Align .banner-content vertically */
-    position: relative;
-    color: white;
-    background-image: url('../images/main-banner.jpg');
-    min-height: 400px; /* Or any other height that suits your design */
-    background-position: center; /* Center the background image */
-    background-size: cover; /* Cover the entire banner area */
+    display: flex; /* Enables flexbox layout which is a more efficient way to  align and distribute space among items in a container, even when their size is unknown */
+    justify-content: center; /* Centers content horizontally within the container */
+    align-items: center; /* Centers content vertically within the container */
+    position: relative;/* Sets the position relative to its normal position */
+    color: white;/* Sets the text color */
+    background-image: url('../images/main-banner.jpg');/* Path to the background image */
+    min-height: 400px; /* Minimum height of the banner */
+    background-position: center; /* Ensures the image is centered */
+    background-size: cover; /*  Ensures the image covers the entire banner */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    overflow: hidden; /* Ensure no content spills out of the banner */
 }
 
+/* Creates a dark overlay before the content for better text visibility */
+.banner::before {
+    content: ''; /* Necessary for before and after pseudo-elements to work */
+    position: absolute;/* Positions the pseudo-element absolutely within the relative container */
+    top: 60px;/* Distance from the top, providing a sort of padding effect */
+    left: 0;/* Aligns to the left edge */
+    right: 0;/* Aligns to the right edge */
+    bottom: 0;/* Aligns to the bottom edge */
+    background: rgba(0, 0, 0, 0.5);  /* Dark Semi-transparent black overlay */
+    z-index: 0; /* Positioned behind the content for a darkening effect  */
+}
 
+/* Styling for the content inside the banner */
+.banner-content {
+    position: relative;  /* Ensures the content is positioned relative to the banner */
+    z-index: 1; /* Ensures the content is above the ::before overlay */
+    width: 100%; /* Ensures the content spans the full width of its container */
+    padding: 0 20px; /* Adds horizontal padding for inner spacing */
+    text-align: left; /*Aligns text to the left side*/
+}
+
+/* Styling for the image used as a background within the banner */
 .banner img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    position: absolute; /* Make it cover the entire banner area */
-    top: 0;
-    left: 0;
-    z-index: -1; /* Send the image to the back */
+    width: 100%; /* Full width to cover the banner */
+    height: auto; /* Maintain the image aspect ratio */
+    display: block;/* Displays the image as a block, taking up the full line */
+    position: absolute;/* Ensures the image fills the banner area */
+    top: 0;/* Aligns the image to the top of the banner */
+    left: 0;/* Aligns the image to the left of the banner */
+    z-index: -1; /* Ensures the image stays in the background behind the overlay */
 }
+
+/* Styling for the main heading within the banner */
+.banner h1 {
+    font-size: 60px;/* Sets the font size */
+    font-weight: bold; /* Bold font for emphasis */
+    margin-bottom: 40px;  /* Creates space below the heading */
+    margin-top: 2em; /* Adds space above the heading for visual balance */
+    line-height: 1.2; /* Increases the line height to add space between wrapped lines */
+    color: white; /* Text color for contrast against the dark background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Adds a text shadow for better readability */
+}
+
+/* Styling for the paragraph within the banner */
+.banner p {
+    font-size: 20px;/* Sets the font size for the paragraph */
+    margin-bottom: 30px;  /* Adds space below the paragraph */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Adds a text shadow for better readability */
+}
+
+/* Styles for call-to-action button */
+.connect-btn {
+    display: inline-block;/* Allows block-level styling with inline behavior */
+    background-color: #c78c06; /* Button background color */
+    color: black; /*  Text color inside the button*/
+    padding: 30px;  /* Provides internal space within the button */
+    text-decoration: none;/* Removes underline from text */
+    font-size: 20px;/* Sets the font size for the button text */
+    border: none;/* Removes the default button border */
+    margin-bottom: 20px; /* Adds space below the button */
+}
+
+.connect-btn .fa-solid.fa-caret-right {
+    font-size: 2em; /* Sets the icon size relative to the button text */
+}
+
+
+
+
 
 .about-section {
     background-color: #F4E2BA; /* Light yellow background */
@@ -535,9 +567,6 @@ nav a:not(:last-child) {
  }
 
 
-  
-  
-
   .hours-operation,
   .location {
   max-width: 95%;
@@ -589,8 +618,6 @@ nav a:not(:last-child) {
     margin-top: 10px; 
  }
 
-
-
  .copyright {
     background-color: #000; 
     padding: 20px 50px; 
@@ -614,8 +641,6 @@ nav a:not(:last-child) {
 
 
 
-
-
  button,
  input[type="submit"],
  .service-link { 
@@ -631,7 +656,6 @@ nav a:not(:last-child) {
     align-items: center; 
     justify-content: center;   
 }
-
 
 
 @media screen and (min-width: 760px) {
