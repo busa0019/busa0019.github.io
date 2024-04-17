@@ -907,7 +907,7 @@ nav a:not(:last-child) {
  
 
 .copyright p{
-    padding-left: 3px; /* Add space above the copyright div */
+    padding-left: 24px; /* Add space above the copyright div */
 }
 
 .copyright {
