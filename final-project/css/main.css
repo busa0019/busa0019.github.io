@@ -916,6 +916,10 @@ nav a:not(:last-child) {
     width: calc(100% + 20%); /* Keeps the width styling as is */
     transform: translateX(-5%); /* Maintains the horizontal position */
 }
-
+.location iframe {
+  
+    margin-left: 13px; /* Adds a left margin to push the map to the right */
+   
 }
 
+}
