@@ -911,7 +911,11 @@ nav a:not(:last-child) {
 }
 
 .copyright {
-    margin-bottom: 30px; /* Add space above the copyright div */
+    padding: 10px 50px; /* Reduced vertical padding to decrease height */
+    margin-bottom: 30px; /* Space above the copyright div */
+    width: calc(100% + 20%); /* Keeps the width styling as is */
+    transform: translateX(-5%); /* Maintains the horizontal position */
 }
+
 }
 
