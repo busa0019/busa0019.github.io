@@ -796,129 +796,116 @@ nav a:not(:last-child) {
 
 
   .service-item#our-vision .service-content {
-    left: 50%;
-    margin-bottom: 10px;
-    padding: 20px; 
-  }
+    left: 50%; /* Horizontally centers the content */
+    margin-bottom: 10px; /* Space below the content */
+    padding: 20px; /* Padding around the content for balance */
+}
 
   
   .service-item#our-vision .service-content h3 {
-    font-size: 3em; 
-    margin-bottom:2px;
-    padding: 2px;
-    margin-top: 50px; 
-  }
+        font-size: 3em; /* Large font size for visual impact */
+        margin-bottom: 2px; /* Minimal space below the header */
+        padding: 2px; /* Padding for the header */
+        margin-top: 50px; /* Space above the header to shift it downwards */
+    }
   
  
   .service-item#our-vision .service-content p {
-    margin-bottom:2px;
-    padding: 2px;
-  }
-  
+    margin-bottom: 2px; /* Minimal space below the paragraph */
+    padding: 2px; /* Padding for the paragraph */
+}
   
   .service-item#our-vision .service-content .service-link {
-    display: inline-block;
-    margin-top: 3px; 
-    margin-bottom: 40px;
-  }
+    display: inline-block; /* Allows block-level elements to sit inline */
+    margin-top: 3px; /* Space above the link/button */
+    margin-bottom: 40px; /* Space below the link/button */
+}
   
  
 
 #our-team .wrapper {
-    max-width: 1200px;
-    margin: auto; /* Center the wrapper */
-    padding: 0 ; /* Optional: Padding on the sides of the wrapper */
+    max-width: 1200px; /* Maximum width for alignment */
+    margin: auto; /* Centers the container within its parent */
+    padding: 0; /* No padding on the sides of the wrapper */
+    margin-right: 30px;
 }
 
 #our-team .team-member {
-    display: flex; /* Use flexbox for layout */
-    align-items: flex-start; /* Align the image and content vertically */
-    background-color: #ffe6ac; /* Background color for the items */
-     /* Space below each team member */
-    padding: 0px; /* Padding inside each team member */
+    display: flex; /* Enables flexbox layout */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+    background-color: #ffe6ac; /* Light yellow background for contrast */
+    padding: 0px; /* No padding inside the team member container */
 }
 
 #our-team .team-member img {
-    width: 50%; /* Set width to fill half the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    margin: 0;
+    width: 50%; /* Sets the image to take up half the width of its container */
+    height: auto; /* Keeps the image aspect ratio consistent */
+    object-fit: cover; /* Ensures the image covers its container without distortion */
+    margin: 0; /* No margin around the image */
 }
 
 #our-team .content-wrapper {
-    padding: 20px; /* Add padding inside the content area */
-    margin-top: -20px;
-    flex-grow: 1; /* Take up the remaining space in the flex container */
+    padding: 20px; /* Padding inside the content area */
+    margin-top: -20px; /* Adjusts the content position upwards */
+    flex-grow: 1; /* Allows the content to fill the available space */
 }
 #our-team .team-member:nth-of-type(1) {
-    margin-bottom: 0px; /*No space below the first team member */
+    margin-bottom: 0; /* Removes space below the first and second team member */
 }
 
 #our-team .team-member:nth-of-type(2) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Reverses the order of flex items */
 }
 
 #our-team h2 {
-    margin-bottom: 5px; /* Adjust this value to increase or decrease the space */
+    margin-bottom: 5px; /* Reduces space below the header */
 }
 
 .hours-location-container {
     display: flex;
-  
-    flex-wrap: wrap; /* Allows elements to wrap as needed */
-    align-items: flex-start; /* Aligns children (form and location) to the top */
-    justify-content: space-between; /* Places space between the form and location */
-  }
+    flex-wrap: wrap; /* Allows children to wrap to next line as needed */
+    align-items: flex-start; /* Aligns children to the top of the container */
+    justify-content: space-between; /* Distributes space between children evenly */
+}
 
   .form-content, .location {
-    flex: 0 0 calc(50% - 20px); /* Takes up 50% of the container minus the desired spacing */
-  max-width: calc(50% - 20px); /* Ensures they do not grow beyond 50% minus the desired spacing */
+    flex: 0 0 calc(50% - 20px); /* Flex basis calculation for 50% width minus spacing */
+    max-width: calc(50% - 20px); /* Maximum width calculation to prevent overflow */
 }
 #contact-us h3 {
-    margin-bottom: 35px; /* Reduces space below the heading to bring it closer to the form elements */
+    margin-bottom: 35px; /* Provides space between the sub-header and following elements */
 }
-
 
 #contact-us h2 {  
-    transform: translateX(-20px); /* Shift the entire header slightly to the left */
+    transform: translateX(-20px); /* Shifts header to the left for alignment */
 }
 
-  /* If you need to push the location up right beside the contact form, you might need to adjust margins/padding */
+ 
   /* Adjusted .form-content to shift slightly to the left */
-.form-content {
-    transform: translateX(-19px);/* Negative margin to shift left */
-    margin-bottom: 0; /* Removes bottom margin if any */
+  .form-content {
+    transform: translateX(-19px); /* Horizontally shifts the form to align with other content */
+    margin-bottom: 0; /* Removes bottom margin to reduce extra space */
 }
 
   .location {
-    margin-left: auto; /* Pushes the location to the right side */
-   /* 
-    Using a large negative margin-top to align this element correctly with the form-content.
+    margin-left: auto; /* Auto margin for right-alignment */
+   /*  Using a large negative margin-top to align this element correctly with the form-content.
     This method was chosen after other flexbox adjustments did not provide the correct visual alignment.
-    Please review this setting if layout changes are made to the form-content or location elements.
     */
-    margin-top: -550px;  /* Moves the location up by its own height */
-    margin-right: 0; /* Ensures no margin on the right side */
-  }
+    margin-top: -550px; /* Large negative margin to pull the element upwards */
+    margin-right: 0; /* Ensures no additional margin on the right */
+}
 
   /* Ensures Hours of Operation takes full width and is ordered last */
   .hours-operation {
-    flex: 1 0 100%; /* Takes full width */
-    max-width: 100%; /* Ensures full width */
-    order: 3; /* Makes sure it comes last */
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+    flex: 1 0 100%; /* Flex grow to take all available width */
+    max-width: 100%; /* Maximum width set to 100% */
+    order: 3; /* CSS order property to place it last in the flex container */
+    margin-bottom: 20px; /* Space below the hours of operation */
+   padding: 1px;
+}
  
- 
-/* TEMP FIX: Adjusted hours-operation due to excess space above. 
-   Negative translateY used as a quick fix. Needs proper debugging to find the root cause. */
-   /* .hours-operation {
-    transform: translateY(-400px); 
-} */
 
-
-/* Applies margins to the copyright div */
 .copyright p{
     padding-left: 3px; /* Add space above the copyright div */
 }
@@ -928,4 +915,3 @@ nav a:not(:last-child) {
 }
 }
 
-}
