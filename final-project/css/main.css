@@ -374,194 +374,160 @@ nav a:not(:last-child) {
    margin-bottom: 1em;/* Space below the button */
   }
   
- 
   .service-item#our-vision  .service-link:hover {
     background-color: #c78c06; /* Gold color on hover for visual feedback */
 }
 
+
+#our-team {
+    margin-top: -60px; /* Reduce the top margin to pull the 'Our Team' section upwards */
    
+}
 
+#our-team .wrapper {
+    padding-right: 40px; /* Reduced right padding to decrease space on the right */
+}
 
+.team-member .content-wrapper {
+    max-width: 1200px; /* Maximum width for content alignment */
+    margin: auto; /* Centers the content within the team member */
+    padding-left: 20px; /*  space so that the content dont touch the edge of the container  */
+    padding-right: 10px;/*  space so that the content dont touch the edge of the container  */
+ } 
+
+.team-member {
+    background-color: #ffe6ac; /* Light yellow background for visibility */
+    margin-bottom: 30px; /* Space below each team member */
+    padding-bottom: 30px; /* Padding at the bottom for separation */
+    margin-left: 20px;  /* Ensures spacing from the left */
+    grid-column: 2; /* Positions team member in the central column of the grid */
+}
+
+.team-member img {
+    width: 100%; /* Full width to ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block display to ensure it takes full line */
+}
   #our-team h2 {
     text-align: left;
-    font-size: 2.5em;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 0.2em;
-    padding: 0 30px; 
+    font-size: 2.5em; /* Large font size for emphasis */
+    color: #222; /* Dark grey color for readability */
+    font-weight: bold; /* Bold font weight for importance */
+    margin-bottom: 0.2em; /* Small margin below the heading */
+    padding: 30px; /* Padding around the heading for spacing */
+}
+  
+.team-member h3 {
+    font-size: 1.5em; /* Slightly larger font for headings */
+    font-weight: bold; /* Bold font for headings */
+    margin-top: 20px; /* Top margin for spacing */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+}
+
+.team-member p {
+    margin-bottom: 20px; /* space below */
   }
-  
-  .team-member {
-    grid-column: 2;
-    background-color:   #F4E2BA;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    margin-left: 20px;  
-  }
-  
-  .team-member img {
-    width: 100%; 
-    height: auto; 
-    display: block;  
-  }
-  
-  .content-wrapper {
-    text-align: left; 
-  }
-  
-  
-  .team-member .content-wrapper {
-    max-width: 1200px;
-    margin: auto;
- }
 
-
- .team-member .content-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
- }
-
-
-
- .team-member .content-wrapper h3,
- .team-member .content-wrapper p {
-    text-align: left;  
- }
-
- #our-team h2, .team-member h3, .team-member p {
-    padding-left: 30px; 
-    padding-right: 30px;
- }
-
- .team-member .content-wrapper h3,
- .team-member .content-wrapper p {
-    padding-left: 0; 
-    padding-right: 0; 
- }
-
-  
-
-  .team-member h3 {
-    font-size: 1.5em; 
-    font-weight: bold;
-    margin-top: 20px ;
-    margin-bottom: 10px; 
-  }
-  
   .team-member p:first-of-type {
-    font-weight: bold;
-    border-bottom: 2px solid #C48E2B; 
-    padding-bottom: 10px; 
-    margin-bottom: 10px; 
+    border-bottom: 2px solid #c78c06;  /* Orange border for visual separation */
   }
   
-  .team-member p {
-    font-size: 1em; 
-   margin-bottom: 20px; 
-  }
-
-
+  
+/* Styles for the Contact Us section */
   #contact-us {
-    text-align: left; 
-    padding: 20px; 
-    
- }
+    text-align: left; /* Aligns text to the left */
+    padding: 20px; /* Padding around the section */
+}
 
  #contact-us h2 {
-    font-size: 36px;
-    font-weight: bold; 
-    margin-bottom: 0.5em; 
- }
+    font-size: 36px; /* Sets the size of the font */
+    font-weight: bold; /* Makes the font bold */
+    margin-bottom: 0.5em; /* Space below the heading */
+}
 
  #contact-us h3 {
-    margin-bottom: 0.5em; 
-    font-weight: bold; 
-    font-size: 30px; 
+    font-size: 30px; /* Sets the size of the font for subheadings */
+    font-weight: bold; /* Makes the font bold */
+    margin-bottom: 0.5em; /* Removes space below subheadings to reduce gap */
 }
 
  #contact-us form {
-   
-    display: grid;
-    gap: 20px; 
- }
+    display: grid; /* Uses grid layout for form elements */
+    gap: 10px; /* Reduces space between grid items */
+}
 
  #contact-us label {
-    display: block; 
-    margin-bottom: 5px; 
- }
+    display: block; /* Ensures labels are on their own line */
+    margin-bottom: 2px; /* Reduces space below each label */
+}
 
  #contact-us input[type="text"],
  #contact-us input[type="email"],
  #contact-us textarea {
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #000; 
-    border-radius: 5px; 
-    
- }
-
+    width: 100%; /* Full width of their container */
+    padding: 10px; /* Padding inside the fields */
+    border: 1px solid #222; /* Specifies border color and style */
+} 
+ 
  #contact-us textarea {
-    resize: vertical; 
-    height: 150px; 
- }
+    resize: vertical; /* Allows vertical resizing only */
+    height: 150px; /* Sets the initial height */
+}
 
  #contact-us button {
-    padding: 10px 20px; 
-    display: inline-block;
-    font-weight: bold;
-    background-color: #000; 
-    color: #C48E2B;; 
-    border: none; 
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1em;
-    transition: background-color 0.3s; 
-    justify-self: start;
-  }
+    padding: 10px 20px; /* Padding inside the button */
+    display: inline-block; /* Allows block level properties */
+    background-color: #222; /* Button background color */
+    color: #c78c06; /* Text color */
+    border: none; /* No borders */
+    cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+    text-align: center; /* Centers text inside the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for 3D effect */
+    font-size: 1.5em; /* Increases font size for better readability */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    justify-self: start; /* Aligns button to the start of the grid area */
+}
 
  #contact-us button:hover {
-    background-color: #b37d35; 
- }
+    background-color: #c78c06; /* Changes background color on hover */
+}
 
-
+/* Styles for the Hours of Operation and Location sections */
   .hours-operation,
   .location {
-  max-width: 95%;
-  margin: 0 auto; 
-  }
+    width: 100%; /* Limits the maximum width to 100% of their container */
+    margin: 0 auto; /* Centers the sections horizontally within their parent */
+    padding: 20px;
+}
 
  .hours-operation h3 {
-    font-size: 24px; 
-    font-weight: bold;
-    margin-bottom: 15px; 
- }
+    font-size: 24px; /* Large font size for visibility */
+    font-weight: bold; /* Bold font weight for emphasis */
+    margin-bottom: 15px; /* Space below the header */
+}
 
 
  .hours-operation table {
-    border-collapse: collapse;
-    width: 100%;
-   
+  border-collapse: collapse; /* Collapses border so that adjacent borders are merged */
+  width: 100%; /* Table width is set to fill its container */
  }
 
 
  .hours-operation th {
-    background-color: #F4E2BA; 
-    color: #333; 
-    text-align: center; 
-    border: 1px solid #333;
-    padding: 8px;
- }
+    background-color: #ffe6ac; /* Light yellow background for headers */
+    color: #222; /* Dark color for text for better contrast */
+    text-align: center; /* Centers text within the header cells */
+    border: 1px solid #222; /* Dark borders for definition */
+    padding: 8px; /* Padding within the cells for spacing */
+}
 
 
  .hours-operation td {
-    border: 1px solid #333;
-    padding: 8px;
-    text-align: left; /* Left-aligned text for data cells */
-    background-color: #FFFFFF; /* White background for data cells */
- }
-
+    border: 1px solid #222; /* Dark borders for definition */
+    padding: 8px; /* Padding within the cells for spacing */
+    text-align: left; /* Aligns text to the left within the data cells */
+    background-color: #FFFFFF; /* White background for data cells for clarity */
+}
 
 
  .location h3 {
