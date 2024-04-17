@@ -756,12 +756,14 @@ nav a:not(:last-child) {
         grid-template-columns: repeat(6, 1fr); /* Creates a 6-column layout */
         gap: 20px; /* Sets spacing between grid items */
     }
+   
     #services .service-link {
-        display: block;
+        display:block;
     }
     
     #services .service-item {
           margin-bottom: 30px; /* Space below each item */
+          margin-bottom: 0; 
     }
 
     /* Target the first two service items for 50-50 split */
@@ -778,22 +780,49 @@ nav a:not(:last-child) {
 
     #services .service-content h3 {
         padding: 20px;
-        font-size: 1.5em;
+        font-size: 1.3em;
+       
     }
-    #services .service-item {
-        margin-bottom: 0;      
+    #services .service-content p {
+        padding: 20px; 
     }
     
-
+       
  /* Target 'Our Vision',  it's the sixth item */
  #services .service-item:nth-child(6) {
     grid-column: 1 / -1; /* Spans from the first to the last column of the grid */
     background-color: white; /* Sets a white background, making it stand out from other items */
 }
-.service-item#our-vision .service-content .service-link {
-    display: inline-block;
+
+
+  .service-item#our-vision .service-content {
+    left: 50%;
+    margin-bottom: 10px;
+    padding: 20px; 
   }
 
+  
+  .service-item#our-vision .service-content h3 {
+    font-size: 3em; 
+    margin-bottom:2px;
+    padding: 2px;
+    margin-top: 50px; 
+  }
+  
+ 
+  .service-item#our-vision .service-content p {
+    margin-bottom:2px;
+    padding: 2px;
+  }
+  
+  
+  .service-item#our-vision .service-content .service-link {
+    display: inline-block;
+    margin-top: 3px; 
+    margin-bottom: 40px;
+  }
+  
+ 
 
 #our-team .wrapper {
     max-width: 1200px;
