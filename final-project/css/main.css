@@ -1,7 +1,7 @@
 /* Sets up a grid container with three columns, central column takes most of the space */
 .global-container {
     display: grid;
-    grid-template-columns: 1fr min(95%, 1200px) 1fr;
+    grid-template-columns: 1fr min(95%, 1200px) 1fr;/* Central column adapts to screen size, maxing out at 1200px */
 }
   
 /* Targeting all direct children of global-container, spanning them to the middle column */
@@ -9,71 +9,78 @@
     grid-column: 2;
 }
 
+/* Resets for all elements, ensuring consistency and box model accuracy */
 /* Base styles, mobile-first (no media query needed) */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+    box-sizing: border-box;/* Includes padding and border in the element's total width and height */
+    list-style: none; /* Removes bullet points from lists */
 }
   
+/* Sets the default font for the body */
 body {
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold; /* Makes the font bold */
+    line-height: 1.6; /* Adjusts the spacing between lines */
+    color: #222; /* Sets the font color to a dark grey, similar to the screenshot */
 }
 
-  
+  /* Wrapper for content, providing consistent spacing */
 .wrapper {
-    margin: 0 auto;
+    margin: 0 auto;/* Centers content horizontally */
     padding: 0 20px; /* Adequate padding on smaller screens */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 /* Styles for the header */
 header {
-    background-color: #333; /* Dark background for the header */
-    color: white;
+    background-color: #222; /* Dark background for the header */
     padding: 1em 0; /* Padding at the top and bottom */
 }
   
+/* Styling for the logo container within the header */
 .logo-container {
     background-color: #c78c06; /* Gold color for the logo container */
-    padding: 20px; /* Padding around the logo */
-    display: flex; /*  flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 20px; /* Spacing around the logo */
+    display: flex;  /* Enables flexbox layout for inner items */
+    align-items: center; /* Vertically centers items within the logo container */
+    justify-content: space-between;/* Distributes space between and around content items */
+    margin-left: 20px;/* Left margin */
+    margin-right: 20px;/* Right margin */
 }
   
 /* Styles for the navigation menu */
 nav {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    background-color: #c78c06;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex-direction: column; /* Organizes navigation items in a column */
+    align-items: center; /* Center navigation  items horizontally */
+    background-color: #c78c06;/* Background color to match the logo container */
+    margin-left: 20px;/* Left margin */
+    margin-right: 20px;/* Right margin */
 }
   
+
 nav ul {
     width: 100%; /* Full width of the nav container */
 }
   
+
 nav li {
-    display: block;
+    display: block;/* Displays each navigation item as a block for easier styling */
 }
   
 nav a {
-    display: block; /* Make links fill the li element */
+    display: block; /* Ensures the link uses the full width of its container */
     padding: 1em; /* Padding for the links */
     color:#c78c06; /* Text color for the links */
     text-decoration: none; /* Remove underlines from links */
     text-align: center; /* Center text within the link */
-    background-color: #333; /* Dark background for the links */
-    border-top: 1px solid #c78c06; /* Gold top border for separation */
+    background-color: #222; /* Dark background for the links */
+    border-top: 1px solid #c78c06; /* Separates items with a top border */
 }
 nav a:first-child {
-    border-top: none;
+    border-top: none;/* Removes top border for the first link */
 }
   
 nav a:not(:last-child) {
@@ -82,43 +89,45 @@ nav a:not(:last-child) {
 
 /* The active link style */
 .active {
-    background-color: #c78c06;
-    color: #333; /* Dark text for the active link */
+    background-color: #c78c06;/*  background for the active link */
+    color: #222; /* Dark text for the active link */
 }
   
-/* Search bar styling */
+/* Styles for the search container */
 .search-container {
-    display: flex; /* Using flexbox for layout */
-    justify-content: center; /* Center the search bar */
-    position: relative;
+    display: flex; /* Enables flexbox layout to center the search form */
+    justify-content: center;/* Centers the search form horizontally */
+    position: relative;/* Needed for absolute positioning of children */
 }
   
+/* Styles for the search form */
 .search-container form {
-    position: relative; /* Position the form relatively for absolute positioning the button inside it */
-    width: calc(100% - 2em);
+    position: relative;  /* Allows absolute positioning within the form */
+    width: calc(100% - 2em);/* Calculates width, subtracting fixed padding */
 }
   
+/* Styles for the text input within the search form */
 .search-container input[type="text"] {
-    width: 100%; /* Full width of the input */
+    width: 100%; /* Uses all available width */
     padding: 0.5em; /* Padding inside the search input */
     /*border: 2px solid #C48E2B;  Gold-yellow border for the input */
     /*border-radius: 5px 0 0 5px;  Rounded corners on the left side */
     border-right: none; /* Remove right border */
 }
-                                                                                            
+                
 .search-container button {
-    position: absolute; /* Position the button absolutely inside the form */
-    right: 0; /* Align it to the right */
-    top: 0; /* Align it to the top */
-    width: 30px; /* Width of the button */
+    position: absolute;  /* Absolutely positions the button within the form */
+    right: 0;  /* Aligns the button to the right edge of the input */
+    top: 0; /* Aligns the button to the top of the input */
+    width: 30px; /* Fixed width for the button */
     height: 100%; /* Height to match input field */
     border: 2px solid #c78c06; /* Gold-yellow border for the button */
    /* border-left: none;  Remove left border */
-    background-color: #333; /* Dark background for the button */
+    background-color: #222; /* Dark background for the button */
     color: #c78c06; /* Gold-yellow color for the icon */
-    padding: 10px; /* Padding to ensure the icon is centered */
+    padding: 10px;  /* Padding to center the icon vertically */
    /*  border-radius: 0 5px 5px 0; Rounded corners on the right side */
-    cursor: pointer;
+    cursor: pointer;/* Change the cursor to a pointer to indicate clickability */
 }
 
 /* Sets up a flexible display container to center the banner content horizontally and vertically */
@@ -143,7 +152,7 @@ nav a:not(:last-child) {
     top: 60px;/* Distance from the top, providing a sort of padding effect */
     left: 0;/* Aligns to the left edge */
     right: 0;/* Aligns to the right edge */
-    bottom: 0;/* Aligns to the bottom edge */
+    bottom:60px;/* Aligns to the bottom edge */
     background: rgba(0, 0, 0, 0.5);  /* Dark Semi-transparent black overlay */
     z-index: 0; /* Positioned behind the content for a darkening effect  */
 }
@@ -153,7 +162,7 @@ nav a:not(:last-child) {
     position: relative;  /* Ensures the content is positioned relative to the banner */
     z-index: 1; /* Ensures the content is above the ::before overlay */
     width: 100%; /* Ensures the content spans the full width of its container */
-    padding: 0 20px; /* Adds horizontal padding for inner spacing */
+    padding: 20px; /* Adds horizontal padding for inner spacing */
     text-align: left; /*Aligns text to the left side*/
 }
 
@@ -195,7 +204,7 @@ nav a:not(:last-child) {
     text-decoration: none;/* Removes underline from text */
     font-size: 20px;/* Sets the font size for the button text */
     border: none;/* Removes the default button border */
-    margin-bottom: 20px; /* Adds space below the button */
+    margin-bottom: 60px; /* Adds space below the button */   
 }
 
 .connect-btn .fa-solid.fa-caret-right {
@@ -204,127 +213,118 @@ nav a:not(:last-child) {
 
 
 
-
-
+/* Styles for the About Us section */
 .about-section {
-    background-color: #F4E2BA; /* Light yellow background */
-    padding: 50px 0; /* Top and bottom padding, no left and right padding */
-    text-align: left;
+    background-color: #ffe6ac; /* Light yellow background */
+    padding: 0px 0;/* Zero top and bottom padding; adjust as necessary for spacing */
+    text-align: left;/* Aligns text to the left for consistency with natural reading direction */
 }
 
 .about-section .container {
-    max-width: 100%; /* Set a max-width that matches your design */
-    margin: auto; /* Center the container */
-    display: flex; /* Align the image container and content side by side */
-    align-items: center;
-    gap: 5px; /* Creates a gap between the image and content */
+    max-width: 100%; /* Ensures the container's maximum width is the full width of its parent */
+    margin: auto; /* Centers the container within the parent element */
+   /* Removed display: flex; since we're not using flexbox for a stacked layout */
+    /* Removed align-items: center; since it's not needed without flexbox */
+    /* Removed gap: 5px; since it's not needed without flexbox */
 }
 
 .about-image-container {
-    flex: 1; /* Flex value to take available space */
-    padding: 20px;
+    padding: 20px; /* Adds padding around the image for spacing from other elements */
 }
 
 .about-image-container img {
-    width: 100%; 
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any extra space below the image */
-    
+    width: 100%;  /* Makes the image responsive, adjusting its width to the container */
+    height: auto;/* Keeps the image's aspect ratio intact as it resizes */
+    display: block;  /* Prevents inline-level space below the image */ 
 }
 
 .about-content {
-    padding: 30px; /* Padding inside the content area */
-   
+    padding: 20px;  /* Adds internal spacing to the text content area */ 
 }
 
 .about-content h2 {
-    font-size: 50px; 
-    font-weight: bold; 
-    margin-bottom: 30px; 
-    color: #333; 
+    font-size: 50px;  /* Large font size for the header */
+    font-weight: bold; /* Bold font weight for emphasis */
+    margin-bottom: 30px; /* Creates separation from the heading to the text that follows */
+    color: #222; /* Dark color for text for better readability */
+    
 }
 
 .about-content p {
-    font-size: 1em; 
-    font-weight: bold; 
-    color: #333; 
+    font-size: 1em; /* Font size  set */
+    font-weight: bold; /* Bold font weight to complement the header style */
+    color: #222;  /* Dark color for text for better readability */
+    
 }
 
 .about-content p:nth-child(2) {
-    margin-bottom: 20px;
+    margin-bottom: 20px;/* Adds space below the second paragraph to separate content sections */
 }
+
+
 
 #services {
     background-color: white;  
-    padding: 50px 0; 
-}
-
-#services .container {
-    max-width: 95%; 
-    margin: auto; 
+    padding: 20px ; /* Space around the services section */
 }
 
 #services .services-header {
     text-align: left;
     font-size: 2.5em;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 0.2em; 
-    padding: 0 30px; 
+    color: #222; /* Dark  color for contrast and readability */
+    font-weight: bold;/* Bold font weight for the section header */
+    margin-bottom: 0.2em; /* Space below the header */  
 }
 
 #services .service-item {
-    background-color: #F4E2BA; 
-    margin-bottom: 30px;     
+    background-color: #ffe6ac; /* Light yellow background for service items */
+    margin-bottom: 30px;   /* Space below each service item */  
 }
 
 #services .service-item img {
-    width: 100%;
-    height: auto;
-    display: block; 
-    margin-bottom: 1em; 
+    width: 100%;/* Full width of their container */
+    height: auto;/* Maintain aspect ratio */
+    display: block; /* Ensures that the image takes up its own line */
+    margin-bottom: 1em;  /* Space below the image */
 }
 
-#services .service-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;  
-    margin-bottom: 20px; 
+
+
+#services .service-content p {
+    font-size: 1em;
+    color: #222;
+    margin-bottom: 20px;
 }
 
-#services .service-item p {
-    margin-bottom: 1em; 
-}
-
-#services .service-link {
-    display: inline-block;
-    background-color: black; 
-    color: white; 
-    padding: 30px; 
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px; 
-    transition: background-color 0.3s ease;
-}
-
-#services .service-link:hover {
-    background-color: #b37d35;  
-}
 #services .service-content {
     padding: 20px; 
 }
 #services .service-content h3 {
-    font-size: 1.5em; 
-    color: #333;  
-    margin-bottom: 20px; 
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 20px;
 }
 
-#services .service-content p {
-    font-size: 1em; 
-    margin-bottom: 20px; 
+#services .service-link {
+    display: inline-block;/* Allows block-level styling with inline behavior */
+    background-color: #222;  /* Dark background color for links/buttons */
+    color: white; /* White text for readability */
+    padding: 30px 50px; /* Padding inside the link/button for clickable area */
+    text-decoration: none;/* Removes underline from link */
+    font-size: 20px;
+    font-weight: bold;/* Bold font weight for the text in the link/button */
+    border: none;/* No border for the link/button */
+    margin-top: 20px;/* Space above the link/button */
+    transition: background-color 0.3s ease;/* Smooth color change effect on hover */
 }
+#services .service-link i {
+    font-size: 2em; 
+}
+
+#services .service-link:hover {
+    background-color: #b37d35; /* Change background color on hover for interaction feedback */
+}
+
 
 
 .service-item#our-vision {
