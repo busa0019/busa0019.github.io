@@ -328,7 +328,6 @@ nav a:not(:last-child) {
     background-color: #b37d35; /* Change background color on hover for interaction feedback */
 }
 
-
 .service-item#our-vision {
     background-color: transparent; /* Transparent background for the vision section */ 
     width: calc(100% + 10%); /* Width slightly larger than its container to stand out */
