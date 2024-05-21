@@ -9,6 +9,7 @@ body {
     grid-template-columns: repeat(2, 1fr);/* Create two columns of equal width */
     gap: 20px;/* Sets space between grid items */
     margin: 20px;/* Adds margin around the grid container */
+    width: 100%;
   }
   
   .siteheader h1 {
@@ -27,6 +28,7 @@ body {
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
+    width: 100%;
   }
   
   /* Styles for headings within each emoji card */
